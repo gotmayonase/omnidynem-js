@@ -47,22 +47,20 @@ app.controller('HomeController', function($scope, $http){
     $scope.groupedPerks = _.groupBy($scope.perks, key);
   };
 
-  $scope.selectPerk = function(perk) {
-    if (perk.selected || !perk.available) {
+  $scope.togglePerk = function(perk) {
+    if (!perk.available) {
       return;
     }
 
-    $scope.points += perk.cost;
-    perk.selected = true;
-  };
-
-  $scope.deselectPerk = function(perk) {
-    if (!perk.selected) {
-      return;
+    if (perk.selected) {
+      $scope.points -= perk.cost;
+      delete perk.selected;
     }
-
-    $scope.points -= perk.cost;
-    delete perk.selected;
+    else
+    {
+      $scope.points += perk.cost;
+      perk.selected = true;
+    }
   };
 
   $scope.updatePerkAvailability = function() {
@@ -71,18 +69,27 @@ app.controller('HomeController', function($scope, $http){
       var frame = _.findWhere($scope.suits, { name: perk.frame });
       if (!perk.universal && $scope.currentSuit.name !== perk.frame) {
         perk.available = false;
-        perk.selected = false;
+
+        if (perk.selected) {
+          $scope.points -= perk.cost;
+          perk.selected = false;
+        }
+
         return;
       }
 
       if (frame.level < perk.level) {
-        perk.selected = false;
         perk.available = false;
+
+        if (perk.selected) {
+          $scope.points -= perk.cost;
+          perk.selected = false;
+        }
+
         return;
       }
 
       perk.available = true;
-      console.log(perk.available);
     });
   };
 });
