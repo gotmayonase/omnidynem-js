@@ -1,0 +1,39 @@
+{
+  "suits": [
+    {
+      "name": "Circle"
+    },
+    {
+      "name": "Cylinder"
+    }
+  ],
+  "perks": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "cost": 1,
+      "concern": "Taste",
+      "frame": "Circle",
+      "level": 1,
+      "universal": true
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "cost": 1,
+      "concern": "Taste",
+      "frame": "Cylinder",
+      "level": 1,
+      "universal": true
+    },
+    {
+      "id": 3,
+      "name": "Acai Berry",
+      "cost": 1,
+      "concern": "Health",
+      "frame": "Circle",
+      "level": 5,
+      "universal": false
+    }
+  ]
+}

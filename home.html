@@ -1,0 +1,34 @@
+Frames
+
+<ol>
+  <li ng-repeat="suit in suits">
+    {{ suit.name }}
+    <input ng-model="suit.level" />
+    <input type="radio" name="suited" ng-value="suit" ng-model="$parent.currentSuit" ng-change="updatePerkAvailability()" />
+  </li>
+</ol>
+
+{{currentSuit}}
+
+{{ points }}/100
+
+group:
+<a ng-click="regroup('cost')">Cost</a>
+<a ng-click="regroup('concern')">Concern</a>
+<a ng-click="regroup('frame')">Frame</a>
+<ol>
+  <li ng-repeat="(group, items) in groupedPerks">
+    {{ group }}
+    <ol>
+      <li ng-repeat="item in items" ng-click="selectPerk(item)">
+        {{ item.name }} lvl: {{item.level}}, frame: {{item.frame}}
+        <span ng-if="item.available">(available)</span>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+The Chosen Ones
+<ol>
+  <li ng-repeat="item in perks | filter:{ selected: true }">{{item.name}} <a ng-click="deselectPerk(item)">x</a></li>
+</ol>
