@@ -10,20 +10,32 @@ body {
 }
 
 .perk {
-  height:90px;
+  width: 90px;
+  height: 90px;
   line-height:90px;
   text-align:center;
   border: solid 5px transparent;
   border-radius: 50%;
-  background: #eee;
-  color: #333;
+  background: #333;
+  color: #fff;
+  opacity:.6;
+  letter-spacing: normal;
 }
 
 .all-perks .perk.available {
-  background: #333;
-  color: #fff
+  opacity: 1
 }
 
 .all-perks .perk.selected {
-  border-color: #2980b9;
+  border-color: #27ae60;
+}
+
+.slotted-perks .perk {
+  background-color: #2ecc71;
+  border-color: #27ae60;
+}
+
+.pure-u-5-12 {
+  box-sizing: border-box;
+  padding: 0 20px;
 }

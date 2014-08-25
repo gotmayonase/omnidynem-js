@@ -43,6 +43,7 @@ app.controller('HomeController', function($scope, $http){
   };
 
   $scope.regroup = function(key) {
+    $scope.group = key;
     $scope.groupedPerks = _.groupBy($scope.perks, key);
   };
 
@@ -70,10 +71,12 @@ app.controller('HomeController', function($scope, $http){
       var frame = _.findWhere($scope.suits, { name: perk.frame });
       if (!perk.universal && $scope.currentSuit.name !== perk.frame) {
         perk.available = false;
+        perk.selected = false;
         return;
       }
 
       if (frame.level < perk.level) {
+        perk.selected = false;
         perk.available = false;
         return;
       }
