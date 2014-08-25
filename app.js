@@ -1,4 +1,4 @@
-var app = angular.module('Perks', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+var app = angular.module('Perks', ['ui.utils','ui.router','ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -14,7 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.controller('HomeController', function($scope, $http){
 
-  $scope.points = 0
+  $scope.points = 0;
   $scope.suits  = [];
   $scope.perks  = [];
   $scope.group  = "cost";
@@ -31,8 +31,8 @@ app.controller('HomeController', function($scope, $http){
         suit.level = 40;
         $scope.$watch(function(){ return suit.level; }, function(){
           $scope.updatePerkAvailability();
-        })
-      })
+        });
+      });
 
       $scope.updatePerkAvailability();
     });
@@ -40,20 +40,20 @@ app.controller('HomeController', function($scope, $http){
   $scope.selectSuit = function(suit){
     $scope.currentSuit = suit;
     $scope.refreshPerkAvailability();
-  }
+  };
 
   $scope.regroup = function(key) {
     $scope.groupedPerks = _.groupBy($scope.perks, key);
-  }
+  };
 
   $scope.selectPerk = function(perk) {
-    if (perk.selected) {
+    if (perk.selected || !perk.available) {
       return;
     }
 
     $scope.points += perk.cost;
     perk.selected = true;
-  }
+  };
 
   $scope.deselectPerk = function(perk) {
     if (!perk.selected) {
@@ -62,13 +62,13 @@ app.controller('HomeController', function($scope, $http){
 
     $scope.points -= perk.cost;
     delete perk.selected;
-  }
+  };
 
   $scope.updatePerkAvailability = function() {
 
     _.each($scope.perks, function(perk){
       var frame = _.findWhere($scope.suits, { name: perk.frame });
-      if (!perk.universal && $scope.currentSuit.name != perk.frame) {
+      if (!perk.universal && $scope.currentSuit.name !== perk.frame) {
         perk.available = false;
         return;
       }
@@ -81,7 +81,7 @@ app.controller('HomeController', function($scope, $http){
       perk.available = true;
       console.log(perk.available);
     });
-  }
+  };
 });
 
 

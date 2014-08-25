@@ -1,34 +1,30 @@
-Frames
+<div class="pure-g">
+  <form class="pure-form pure-u-1-4">
+    <div class="frame pure-g" ng-repeat="suit in suits">
+      <label class="pure-u-3-4">
+        <input type="radio" name="suited" ng-value="suit" ng-model="$parent.currentSuit" ng-change="updatePerkAvailability()" /> {{ suit.name }}
+      </label>
+      <div class="pure-u-1-4">
+        <input ng-model="suit.level" class="pure-u-1" />
+      </div>
+    </div>
+  </form>
 
-<ol>
-  <li ng-repeat="suit in suits">
-    {{ suit.name }}
-    <input ng-model="suit.level" />
-    <input type="radio" name="suited" ng-value="suit" ng-model="$parent.currentSuit" ng-change="updatePerkAvailability()" />
-  </li>
-</ol>
+  <div class="pure-u-1-2 all-perks">
+    <div class="perk-group" ng-repeat="(group, items) in groupedPerks">
+      {{ $parent.group }}: {{group}}
+      <div class="pure-g">
+        <a ng-repeat="item in items" ng-click="selectPerk(item)" class="perk pure-u-1-8" ng-class="{ selected: item.selected, available: item.available }">{{ item.name }}</a>
+      </div>
+    </div>
+  </div>
 
-{{currentSuit}}
+  <div class="pure-u-1-4">
+    {{ points }}/100
 
-{{ points }}/100
-
-group:
-<a ng-click="regroup('cost')">Cost</a>
-<a ng-click="regroup('concern')">Concern</a>
-<a ng-click="regroup('frame')">Frame</a>
-<ol>
-  <li ng-repeat="(group, items) in groupedPerks">
-    {{ group }}
     <ol>
-      <li ng-repeat="item in items" ng-click="selectPerk(item)">
-        {{ item.name }} lvl: {{item.level}}, frame: {{item.frame}}
-        <span ng-if="item.available">(available)</span>
-      </li>
+      <li ng-repeat="item in perks | filter:{ selected: true }">{{item.name}} <a ng-click="deselectPerk(item)">x</a></li>
     </ol>
-  </li>
-</ol>
 
-The Chosen Ones
-<ol>
-  <li ng-repeat="item in perks | filter:{ selected: true }">{{item.name}} <a ng-click="deselectPerk(item)">x</a></li>
-</ol>
+  </div>
+</div>
