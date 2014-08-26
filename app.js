@@ -1,5 +1,5 @@
 /*global Chart */
-var app = angular.module('Perks', ['ui.utils','ui.router','ngAnimate']);
+var app = angular.module('Perks', ['ui.utils','ui.router','ui.bootstrap','ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
