@@ -234,12 +234,20 @@ app.directive('angChartjsDoughnut', function(){
   return chartjsDoughnut;
 });
 
-app.directive('perk', function() {
+app.directive('perk', function($popover) {
   return {
     templateUrl: 'perk.html',
     restrict: 'E',
     scope: {
       data: '=data'
+    },
+    link: function(scope, element, attrs){
+      var popover = $popover(element,{
+        trigger: 'hover',
+        template: 'popover.html',
+        placement: 'bottom-left'
+      });
+      popover.$scope.perk = scope.data;
     }
   };
 });
