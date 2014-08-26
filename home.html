@@ -42,6 +42,10 @@
         <img src="/images/perks/{{ item.image }}" title=" {{ item.name }}"/>
       </a>
     </div>
+
+    <ul>
+      <li ng-repeat="(frame, level) in requirements">{{frame}}: {{level}}</li>
+    </ul>
   </div>
 </div>
 
