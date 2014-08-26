@@ -14,11 +14,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.controller('HomeController', function($scope, $http){
 
-
   $scope.points = 0;
   $scope.suits  = [];
   $scope.perks  = [];
-  $scope.group  = "cost";
+  $scope.group  = "type";
   $scope.currentSuit = null;
 
   var maxPoints = 10;
@@ -33,9 +32,10 @@ app.controller('HomeController', function($scope, $http){
   })
 
   var COLOR_MAP = {
-    1: '#9b59b6',
-    5: '#3498db',
-    8: '#e67e22'
+    basic: '#95F285',
+    intermediate: '#F4F993',
+    advanced: '#8989F9',
+    master: '#FFB042'
   }
 
   $scope.donut = [defaultDataPoint];
@@ -47,20 +47,10 @@ app.controller('HomeController', function($scope, $http){
       $scope.currentSuit = $scope.suits[0];
       $scope.groupedPerks = _.groupBy($scope.perks, $scope.group);
 
-      _.each($scope.suits, function(suit){
-        suit.level = 40;
-        $scope.$watch(function(){ return suit.level; }, function(){
-          $scope.updatePerkAvailability();
-        });
-      });
+      _.each($scope.suits, function(suit){ suit.level = 40; });
 
       $scope.updatePerkAvailability();
     });
-
-  $scope.selectSuit = function(suit){
-    $scope.currentSuit = suit;
-    $scope.refreshPerkAvailability();
-  };
 
   $scope.regroup = function(key) {
     $scope.group = key;
@@ -90,7 +80,7 @@ app.controller('HomeController', function($scope, $http){
 
       $scope.donut.push({
         id: perk.id,
-        color: COLOR_MAP[perk.cost],
+        color: COLOR_MAP[perk.type],
         value: perk.cost
       })
     }
@@ -99,19 +89,8 @@ app.controller('HomeController', function($scope, $http){
   $scope.updatePerkAvailability = function() {
 
     _.each($scope.perks, function(perk){
-      var frame = _.findWhere($scope.suits, { name: perk.frame });
-      if (!perk.universal && $scope.currentSuit.name !== perk.frame) {
-        perk.available = false;
-
-        if (perk.selected) {
-          $scope.points -= perk.cost;
-          perk.selected = false;
-        }
-
-        return;
-      }
-
-      if (frame.level < perk.level) {
+      var frame = _.findWhere($scope.suits, { key: perk.frame });
+      if (perk.restrictions && perk.restrictions.length && !_.contains(perk.restrictions, $scope.currentSuit.key)) {
         perk.available = false;
 
         if (perk.selected) {

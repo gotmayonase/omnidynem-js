@@ -1,25 +1,12 @@
 <div class="pure-g">
-  <form class="pure-form pure-u-1-6">
-    <div class="frame pure-g" ng-repeat="suit in suits">
-      <label class="pure-u-3-4">
-        <input type="radio" name="suited" ng-value="suit" ng-model="$parent.currentSuit" ng-change="updatePerkAvailability()" /> {{ suit.name }}
-      </label>
-      <div class="pure-u-1-4">
-        <input ng-model="suit.level" class="pure-u-1" />
-      </div>
-    </div>
-  </form>
-
   <div class="pure-u-5-12 all-perks">
-    <div class="pure-menu pure-menu-open pure-menu-horizontal">
-      <ol>
-        <li><a ng-click="regroup('concern')">Concern</a></li>
-        <li><a ng-click="regroup('cost')">Cost</a></li>
-        <li><a ng-click="regroup('frame')">Frame</a></li>
-      </ol>
-    </div>
-    <div class="perk-group" ng-repeat="(group, items) in groupedPerks">
-      <span class="perk-group-header">{{ $parent.group }}: {{group}}</span>
+    <select
+      ng-model="currentSuit"
+      ng-options="suit.name for suit in suits"
+      ng-change="updatePerkAvailability()" />
+
+    <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
+      <span class="perk-group-header perk-label-{{group}}">{{group}}</span>
       <div class="pure-g">
         <a ng-repeat="item in items" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">{{ item.name }}</a>
       </div>
