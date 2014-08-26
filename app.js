@@ -1,3 +1,4 @@
+/*global Chart */
 var app = angular.module('Perks', ['ui.utils','ui.router','ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -25,18 +26,18 @@ app.controller('HomeController', function($scope, $http){
     id:    999,
     value: $scope.maxPoints,
     color: '#000000'
-  }
+  };
 
   $scope.$watch('points', function(points){
     defaultDataPoint.value = (maxPoints - points);
-  })
+  });
 
   var COLOR_MAP = {
     basic: '#95F285',
     intermediate: '#F4F993',
     advanced: '#8989F9',
     master: '#FFB042'
-  }
+  };
 
   $scope.donut = [defaultDataPoint];
 
@@ -57,7 +58,7 @@ app.controller('HomeController', function($scope, $http){
 
         $scope.updatePerkAvailability();
       });
-  }
+  };
 
 
   $scope.regroup = function(key) {
@@ -76,12 +77,14 @@ app.controller('HomeController', function($scope, $http){
 
       var dataPoint = _.findWhere($scope.donut, { id: perk.id });
       var index = $scope.donut.indexOf(dataPoint);
-      if (index != -1) $scope.donut.splice(index, 1);
+      if (index !== -1) { $scope.donut.splice(index, 1); }
     }
     else
     {
-      if (perk.cost > defaultDataPoint.value)
+      if (perk.cost > defaultDataPoint.value) {
         return;
+      }
+
 
       $scope.points += perk.cost;
       perk.selected = true;
@@ -90,12 +93,11 @@ app.controller('HomeController', function($scope, $http){
         id: perk.id,
         color: COLOR_MAP[perk.type],
         value: perk.cost
-      })
+      });
     }
   };
 
   $scope.updatePerkAvailability = function() {
-    console.log('update')
     _.each($scope.perks, function(perk){
       var frame = _.findWhere($scope.suits, { name: perk.frame });
       if (perk.restrictions && perk.restrictions.length && !_.contains(perk.restrictions, $scope.currentSuit.name)) {
