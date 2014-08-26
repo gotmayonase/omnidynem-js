@@ -47,7 +47,7 @@ app.controller('HomeController', function($scope, $http, $filter){
     Master: '#FFB042'
   };
 
-  var POINTS_PER_LEVEL = [0,0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,4,4,5,5,6,6,7,7,8,9,10,11,12,13,14,15,16,17,18,19,21]
+  var POINTS_PER_LEVEL = [0,0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,4,4,5,5,6,6,7,7,8,9,10,11,12,13,14,15,16,17,18,19,21];
 
   $scope.donut = [defaultDataPoint];
 
@@ -107,10 +107,11 @@ app.controller('HomeController', function($scope, $http, $filter){
       // $scope.donut.push();
       $scope.selected_perks_count += 1;
     }
-    
+
     var selected = $filter('filter')($scope.perks,{ selected: true });
     var sorted = $filter('orderBy')(selected,'cost');
     $scope.donut = _.map(sorted, function(perk){
+      console.log(perk);
       return {
         id: perk.id,
         color: COLOR_MAP[perk.type],

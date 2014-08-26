@@ -1,7 +1,17 @@
 <div class="pure-g" id="container">
+  <div class="pure-u-1-1" id="header">
+    <img src="/images/frames/{{ currentSuit.thumb }}" title="{{currentSuit.name}}" width="32" height="32" style="margin-top: 8px; margin-left: 8px;"/>
+    <select
+      ng-model="currentSuit"
+      ng-options="suit.name for suit in suits"
+      ng-change="updatePerkAvailability()" />
+  </div>
   <div class="pure-u-13-24 all-perks">
     <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
-      <span class="perk-group-header perk-label-{{ levels[group] }}">{{ levels[group] }}</span>
+      <div class="perk-group-header perk-label-{{ levels[group] }}">
+        <span class="title">{{ levels[group] }}</span>
+        <span class="cost">{{ group }}pt</span>
+      </div>
       <div class="pure-g">
         <a ng-repeat="item in items | orderBy:'!available'" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">
           <img src="/images/perks/{{ item.image }}" title=" {{ item.name }}"/>
@@ -14,7 +24,7 @@
 
   <div class="pure-u-5-12 slotted-perks">
 
-
+    <img src="/images/frames/{{ currentSuit.image }}" title="{{currentSuit.name}}" width="400" height="400" style="opacity: 0.12;position: absolute;"/>
     <div ang:chartjs:doughnut
       data-chartjs-model="donut"
       data-chartjs-animation="false"
