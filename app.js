@@ -1,5 +1,5 @@
 /*global Chart */
-var app = angular.module('Perks', ['ui.utils','ui.router','ngAnimate']);
+var app = angular.module('Perks', ['ui.utils','ui.router','ui.bootstrap','ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -107,7 +107,7 @@ app.controller('HomeController', function($scope, $http, $filter){
       // $scope.donut.push();
       $scope.selected_perks_count += 1;
     }
-    
+
     var selected = $filter('filter')($scope.perks,{ selected: true });
     var sorted = $filter('orderBy')(selected,'cost');
     $scope.donut = _.map(sorted, function(perk){
