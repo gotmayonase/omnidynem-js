@@ -13,9 +13,13 @@
         <span class="cost">{{ group }}pt</span>
       </div>
       <div class="pure-g">
-        <a ng-repeat="item in items | orderBy:'!available'" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">
-          <img src="/images/perks/{{ item.image }}" title=" {{ item.name }}"/>
-        </a>
+        <perk
+          ng-repeat="item in items | orderBy:'!available'"
+          ng-class="{ selected: item.selected, available: item.available }"
+          ng-click="togglePerk(item)"
+          data="item"
+          class="perk">
+        </perk>
       </div>
     </div>
   </div>
@@ -40,3 +44,8 @@
     </div>
   </div>
 </div>
+
+<!--
+<a class="perk"
+
+-->
