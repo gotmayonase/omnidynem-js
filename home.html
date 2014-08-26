@@ -3,9 +3,13 @@
     <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
       <span class="perk-group-header perk-label-{{ levels[group] }}">{{ levels[group] }}</span>
       <div class="pure-g">
-        <a ng-repeat="item in items | orderBy:'!available'" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">
-          <img src="/images/perks/{{ item.image }}" title=" {{ item.name }}"/>
-        </a>
+        <perk
+          ng-repeat="item in items | orderBy:'!available'"
+          ng-class="{ selected: item.selected, available: item.available }"
+          ng-click="togglePerk(item)"
+          data="item"
+          class="perk">
+        </perk>
       </div>
     </div>
   </div>
@@ -13,8 +17,6 @@
   <div class="pure-u-1-24" id="gutter"></div>
 
   <div class="pure-u-5-12 slotted-perks">
-
-
     <div ang:chartjs:doughnut
       data-chartjs-model="donut"
       data-chartjs-animation="false"
@@ -30,3 +32,8 @@
     </div>
   </div>
 </div>
+
+<!--
+<a class="perk"
+
+-->

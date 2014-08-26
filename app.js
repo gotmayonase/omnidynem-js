@@ -1,5 +1,5 @@
 /*global Chart */
-var app = angular.module('Perks', ['ui.utils','ui.router','ui.bootstrap','ngAnimate']);
+var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -225,6 +225,17 @@ app.directive('angChartjsDoughnut', function(){
   };
   return chartjsDoughnut;
 });
+
+app.directive('perk', function() {
+  return {
+    templateUrl: 'perk.html',
+    restrict: 'E',
+    scope: {
+      data: '=data'
+    }
+  };
+});
+
 
 app.run(function($rootScope) {
   $rootScope.safeApply = function(fn) {
