@@ -1,31 +1,29 @@
-<div class="pure-g">
-  <div class="pure-u-7-12 all-perks">
-    <select
-      ng-model="currentSuit"
-      ng-options="suit.name for suit in suits"
-      ng-change="updatePerkAvailability()" />
-
+<div class="pure-g" id="container">
+  <div class="pure-u-13-24 all-perks">
     <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
-      <span class="perk-group-header perk-label-{{group}}">{{group}}</span>
+      <span class="perk-group-header perk-label-{{ levels[group] }}">{{ levels[group] }}</span>
       <div class="pure-g">
-        <a ng-repeat="item in items" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">
+        <a ng-repeat="item in items | orderBy:'!available'" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">
           <img src="/images/perks/{{ item.image }}" title=" {{ item.name }}"/>
         </a>
       </div>
     </div>
   </div>
 
+  <div class="pure-u-1-24" id="gutter"></div>
+
   <div class="pure-u-5-12 slotted-perks">
-    {{ points }}/10
+
 
     <div ang:chartjs:doughnut
       data-chartjs-model="donut"
-      data-chartjs-width="200"
-      data-chartjs-height="200"
       data-chartjs-animation="false"
-      data-chartjs-percentage-inner-cutout="80"></div>
+      data-chartjs-percentage-inner-cutout="80"
+      data-chartjs-on-animation-complete="drawPointsLabel"
+      data-chartjs-segment-stroke-color="#444"></div>
 
-    <div class="pure-g">
+    <span id="points">{{ selected_perks_count }}/10</span>
+    <div class="pure-g perks-container">
       <a ng-repeat="item in perks | filter:{ selected: true }" ng-click="togglePerk(item)" class="perk">
         <img src="/images/perks/{{ item.image }}" title=" {{ item.name }}"/>
       </a>

@@ -13,31 +13,41 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home');
 });
 
-app.controller('HomeController', function($scope, $http){
+
+app.controller('HomeController', function($scope, $http, $filter){
 
   $scope.points = 0;
+  $scope.max_points = 21;
   $scope.suits  = [];
   $scope.perks  = [];
-  $scope.group  = "type";
+  $scope.group  = "cost";
+  $scope.selected_perks_count = 0;
   $scope.currentSuit = null;
+  $scope.levels = {
+    '1': 'Basic',
+    '2': 'Intermediate',
+    '5': 'Advanced',
+    '8': 'Master'
+  };
 
-  var maxPoints = 10;
   var defaultDataPoint = {
     id:    999,
-    value: $scope.maxPoints,
+    value: $scope.max_points,
     color: '#000000'
   };
 
   $scope.$watch('points', function(points){
-    defaultDataPoint.value = (maxPoints - points);
+    defaultDataPoint.value = ($scope.max_points - points);
   });
 
   var COLOR_MAP = {
-    basic: '#95F285',
-    intermediate: '#F4F993',
-    advanced: '#8989F9',
-    master: '#FFB042'
+    Basic: '#95F285',
+    Intermediate: '#F4F993',
+    Advanced: '#8989F9',
+    Master: '#FFB042'
   };
+
+  var POINTS_PER_LEVEL = [0,0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,4,4,5,5,6,6,7,7,8,9,10,11,12,13,14,15,16,17,18,19,21]
 
   $scope.donut = [defaultDataPoint];
 
@@ -67,6 +77,7 @@ app.controller('HomeController', function($scope, $http){
   };
 
   $scope.togglePerk = function(perk) {
+
     if (!perk.available) {
       return;
     }
@@ -76,8 +87,9 @@ app.controller('HomeController', function($scope, $http){
       delete perk.selected;
 
       var dataPoint = _.findWhere($scope.donut, { id: perk.id });
-      var index = $scope.donut.indexOf(dataPoint);
-      if (index !== -1) { $scope.donut.splice(index, 1); }
+      // var index = $scope.donut.indexOf(dataPoint);
+      // if (index !== -1) { $scope.donut.splice(index, 1); }
+      $scope.selected_perks_count -= 1;
     }
     else
     {
@@ -85,16 +97,28 @@ app.controller('HomeController', function($scope, $http){
         return;
       }
 
+      if ($scope.selected_perks_count >= 10) {
+        return;
+      }
 
       $scope.points += perk.cost;
       perk.selected = true;
 
-      $scope.donut.push({
+      // $scope.donut.push();
+      $scope.selected_perks_count += 1;
+    }
+    
+    var selected = $filter('filter')($scope.perks,{ selected: true });
+    var sorted = $filter('orderBy')(selected,'cost');
+    $scope.donut = _.map(sorted, function(perk){
+      return {
         id: perk.id,
         color: COLOR_MAP[perk.type],
         value: perk.cost
-      });
-    }
+      };
+    });
+
+    $scope.donut.push(defaultDataPoint);
   };
 
   $scope.updatePerkAvailability = function() {
@@ -114,6 +138,20 @@ app.controller('HomeController', function($scope, $http){
       perk.available = true;
     });
   };
+
+  $scope.drawPointsLabel = function() {
+    var canvas = $('canvas').get(0);
+    var ctx = canvas.getContext('2d');
+    var x = canvas.width / 2;
+    var y = canvas.height / 2 + 50;
+
+    ctx.textAlign = 'center';
+    ctx.font = "1.5em Noto Sans";
+    ctx.fillStyle = "white";
+    ctx.fillText($scope.points + '/' + $scope.max_points + ' POINTS', x,y);
+    ctx.fillText('ALLOCATED',x,y+30);
+  };
+
 });
 
 app.directive('angChartjsDoughnut', function(){
@@ -129,7 +167,8 @@ app.directive('angChartjsDoughnut', function(){
       canvas.setAttribute('height', height);
       canvas.setAttribute('data-chartjs-model', node.getAttribute('data-chartjs-model'));
 
-      var options = {};
+      var options = {
+      };
 
       var potentialOptions = [
         {key:'data-chartjs-segment-show-stroke', value:'segmentShowStroke', isBoolean: true},

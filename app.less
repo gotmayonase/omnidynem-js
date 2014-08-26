@@ -13,7 +13,7 @@ body {
   color: #fff;
   font-size: .9em;
   font-family: 'Noto Sans', sans-serif;
-  background: url('images/background.jpg') no-repeat center center;
+  // background: url('images/background.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -22,7 +22,12 @@ body {
 }
 
 div[ui-view] {
-  background-color: rgba(0,0,0,.8 )
+
+}
+
+#container {
+  padding: 30px;
+  background-color: rgba(0,0,0,1);
 }
 
 .perk {
@@ -30,14 +35,26 @@ div[ui-view] {
   height: 75px;
   line-height:75px;
   text-align:center;
-  border: solid 5px transparent;
+  border: solid 2px white;
   border-radius: 50%;
   background: #333;
   color: #fff;
-  opacity:.3;
+  opacity:.2;
   letter-spacing: normal;
-  margin-bottom: 5px;
-  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+#points {
+  font-size: 1.5em;
+  width: 150px;
+  text-align: center;
+  margin: 10px auto 2px;
+  display: block;
+}
+
+.perk-group {
+  margin-bottom: 10px;
 }
 
 .perk img {
@@ -48,18 +65,36 @@ div[ui-view] {
   opacity: 1
 }
 
-.all-perks .perk.selected {
-background-color: #2ecc71;
-border-color: #27ae60;
+#gutter {
+  box-sizing: border-box;
+  border-left: 2px solid #222;
+  border-right: 2px solid #222;
 }
+
+.all-perks .perk.selected {
+  border-color: #1A8A0D;
+}
+
 
 .slotted-perks .perk {
-  opacity: 1
+  opacity: 1;
+  border-color: #1A8A0D;
 }
 
-.pure-u-5-12 {
+.slotted-perks .perks-container {
+  margin: 0 auto;
+  width: 100%;
+  border-top: 3px solid #444;
+  padding-top: 10px;
+}
+
+.slotted-perks {
+  text-align: center;
+}
+
+.pure-u-5-12, .pure-u-13-24 {
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 
@@ -68,24 +103,25 @@ border-color: #27ae60;
   margin: 0 0 1em;
   color: #2ecc71;
   border-bottom: solid 1px #2ecc71;
+  font-size: 1.5em;
 }
 
-.perk-label-basic {
+.perk-label-Basic {
   color: #95F285;
   border-color: #95F285;
 }
 
-.perk-label-intermediate {
+.perk-label-Intermediate {
   color: #F4F993;
   border-color: #F4F993;
 }
 
-.perk-label-advanced {
+.perk-label-Advanced {
   color: #8989F9;
   border-color: #8989F9;
 }
 
-.perk-label-master {
+.perk-label-Master {
   color: #FFB042;
   border-color: #FFB042;
 }
