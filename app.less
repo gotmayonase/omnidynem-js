@@ -17,7 +17,6 @@ body {
   color: #fff;
   font-size: .9em;
   font-family: 'Noto Sans', sans-serif;
-  // background: url('images/background.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -75,14 +74,23 @@ div[ui-view] {
   border-right: 2px solid #222;
 }
 
-.all-perks .perk.selected {
-  border-color: #1A8A0D;
+#header {
+  border: 2px solid #414141;
+  background: #161616;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 20px;
 }
 
+.all-perks .perk.selected {
+  border-color: #1A8A0D;
+  background: rgba(0,30,0,1);
+}
 
 .slotted-perks .perk {
   opacity: 1;
   border-color: #1A8A0D;
+  background: rgba(0,30,0,1);
 }
 
 .slotted-perks .perks-container {
@@ -109,6 +117,11 @@ div[ui-view] {
   color: #2ecc71;
   border-bottom: solid 1px #2ecc71;
   font-size: 1.5em;
+}
+
+.perk-group-header .cost {
+  color: #fff;
+  float: right;
 }
 
 .perk-label-Basic {

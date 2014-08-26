@@ -1,1 +1,81 @@
-[{"id":1,"name":"Accord Dreadnaught"},{"id":2,"name":"Accord Assault"},{"id":3,"name":"Accord Biotech"},{"id":4,"name":"Accord Engineer"},{"id":5,"name":"Accord Recon"},{"id":6,"name":"Tigerclaw"},{"id":7,"name":"Firecat"},{"id":8,"name":"Recluse"},{"id":9,"name":"Dragonfly"},{"id":10,"name":"Rhino"},{"id":11,"name":"Mammoth"},{"id":12,"name":"Nighthawk"},{"id":13,"name":"Raptor"},{"id":14,"name":"Bastion"},{"id":15,"name":"Electron"},{"id":16,"name":"Arsenal"}]
+[{
+  "id": 1,
+  "name": "Accord Dreadnaught",
+  "thumb": "48px-Icon_battleframe_dreadnaught.png",
+  "image": "Icon_battleframe_dreadnaught.png"
+}, {
+  "id": 2,
+  "name": "Accord Assault",
+  "thumb": "48px-Icon_battleframe_assault.png",
+  "image": "Icon_battleframe_assault.png"
+}, {
+  "id": 3,
+  "name": "Accord Biotech",
+  "thumb": "48px-Icon_battleframe_biotech.png",
+  "image": "Icon_battleframe_biotech.png"
+}, {
+  "id": 4,
+  "name": "Accord Engineer",
+  "thumb": "48px-Icon_battleframe_engineer.png",
+  "image": "Icon_battleframe_engineer.png"
+}, {
+  "id": 5,
+  "name": "Accord Recon",
+  "thumb": "48px-Icon_battleframe_recon.png",
+  "image": "Icon_battleframe_recon.png"
+}, {
+  "id": 6,
+  "name": "Tigerclaw",
+  "thumb": "48px-Icon_battleframe_tigerclaw.png",
+  "image": "Icon_battleframe_tigerclaw.png"
+}, {
+  "id": 7,
+  "name": "Firecat",
+  "thumb": "48px-Icon_battleframe_firecat.png",
+  "image": "Icon_battleframe_firecat.png"
+}, {
+  "id": 8,
+  "name": "Recluse",
+  "thumb": "48px-Icon_battleframe_recluse.png",
+  "image": "Icon_battleframe_recluse.png"
+}, {
+  "id": 9,
+  "name": "Dragonfly",
+  "thumb": "48px-Icon_battleframe_dragonfly.png",
+  "image": "Icon_battleframe_dragonfly.png"
+}, {
+  "id": 10,
+  "name": "Rhino",
+  "thumb": "48px-Icon_battleframe_rhino.png",
+  "image": "Icon_battleframe_rhino.png"
+}, {
+  "id": 11,
+  "name": "Mammoth",
+  "thumb": "48px-Icon_battleframe_mammoth.png",
+  "image": "Icon_battleframe_mammoth.png"
+}, {
+  "id": 12,
+  "name": "Nighthawk",
+  "thumb": "48px-Icon_battleframe_nighthawk.png",
+  "image": "Icon_battleframe_nighthawk.png"
+}, {
+  "id": 13,
+  "name": "Raptor",
+  "thumb": "48px-Icon_battleframe_raptor.png",
+  "image": "Icon_battleframe_raptor.png"
+}, {
+  "id": 14,
+  "name": "Bastion",
+  "thumb": "48px-Icon_battleframe_bastion.png",
+  "image": "Icon_battleframe_bastion.png"
+}, {
+  "id": 15,
+  "name": "Electron",
+  "thumb": "48px-Icon_battleframe_electron.png",
+  "image": "Icon_battleframe_electron.png"
+}, {
+  "id": 16,
+  "name": "Arsenal",
+  "thumb": "48px-Icon_battleframe_arsenal.png",
+  "image": "Icon_battleframe_arsenal.png"
+}]

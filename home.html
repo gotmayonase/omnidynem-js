@@ -1,9 +1,19 @@
 <div class="pure-g" id="container">
+  <div class="pure-u-1-1" id="header">
+    <img src="/images/frames/{{ currentSuit.thumb }}" title="{{currentSuit.name}}" width="32" height="32" style="margin-top: 8px; margin-left: 8px;"/>
+    <select
+      ng-model="currentSuit"
+      ng-options="suit.name for suit in suits"
+      ng-change="updatePerkAvailability()" />
+  </div>
   <div class="pure-u-13-24 all-perks">
     <input ng-model="shareUrl" />
     <button ng-click="saveBuild()">Get URL</button>
     <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
-      <span class="perk-group-header perk-label-{{ levels[group] }}">{{ levels[group] }}</span>
+      <div class="perk-group-header perk-label-{{ costs_map[group] }}">
+        <span class="title">{{ costs_map[group] }}</span>
+        <span class="cost">{{ group }}pt</span>
+      </div>
       <div class="pure-g">
         <perk
           ng-repeat="item in items | orderBy:'!available'"
@@ -19,6 +29,8 @@
   <div class="pure-u-1-24" id="gutter"></div>
 
   <div class="pure-u-5-12 slotted-perks">
+
+    <img src="/images/frames/{{ currentSuit.image }}" title="{{currentSuit.name}}" width="400" height="400" style="opacity: 0.12;position: absolute;"/>
     <div ang:chartjs:doughnut
       data-chartjs-model="donut"
       data-chartjs-animation="false"

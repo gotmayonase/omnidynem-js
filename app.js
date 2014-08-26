@@ -33,7 +33,8 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
   $scope.group  = "cost";
   $scope.selected_perks_count = 0;
   $scope.currentSuit = null;
-  $scope.levels = {
+  $scope.requirements = {};
+  $scope.costs_map = {
     '1': 'Basic',
     '2': 'Intermediate',
     '5': 'Advanced',
@@ -57,7 +58,7 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
     Master: '#FFB042'
   };
 
-  var POINTS_PER_LEVEL = [0,0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,4,4,5,5,6,6,7,7,8,9,10,11,12,13,14,15,16,17,18,19,21]
+  var POINTS_PER_LEVEL = [0,0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,4,4,5,5,6,6,7,7,8,9,10,11,12,13,14,15,16,17,18,19,21];
 
   $scope.donut = [defaultDataPoint];
 
@@ -119,8 +120,6 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
       delete perk.selected;
 
       var dataPoint = _.findWhere($scope.donut, { id: perk.id });
-      // var index = $scope.donut.indexOf(dataPoint);
-      // if (index !== -1) { $scope.donut.splice(index, 1); }
       $scope.selected_perks_count -= 1;
     }
     else
@@ -136,7 +135,6 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
       $scope.points += perk.cost;
       perk.selected = true;
 
-      // $scope.donut.push();
       $scope.selected_perks_count += 1;
     }
 
@@ -151,6 +149,16 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
     });
 
     $scope.donut.push(defaultDataPoint);
+    $scope.updatePerkRequirements(selected);
+  };
+
+  $scope.updatePerkRequirements = function(selectedPerks) {
+    _.each(selectedPerks, function(perk){
+      if (perk.frame) {
+        var existing_req = $scope.requirements[perk.frame];
+        $scope.requirements[perk.frame] = Math.max((existing_req || 0), perk.level);
+      }
+    });
   };
 
   $scope.updatePerkAvailability = function() {

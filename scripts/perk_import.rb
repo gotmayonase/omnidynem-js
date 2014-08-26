@@ -20,9 +20,30 @@ def process_url(url, download_directory)
       # frame name
       elsif i == 2
         frame = td.css('a').last.content
+        img = td.css('img')[0]
+
+        thumb_path = img['src']
+        full_size_path = img['srcset'].split(',').last.split(' ').first
+        [thumb_path, full_size_path].each do |img_path|
+          href = "http://firefall-wiki.com#{img_path}"
+          image_name = File.basename(img_path)
+
+          filename = File.join(download_directory,'frames',image_name)
+          unless File.exists? filename
+            puts "Downloading #{href} to #{filename}"
+            image = open(href).read rescue nil
+            if image
+              File.open(filename, 'wb') { |f| f.write(image) }
+            else
+              `touch #{filename}`
+            end
+          end
+        end
         frame_json << {
           id: frame_id,
-          name: frame
+          name: frame,
+          thumb: File.basename(thumb_path),
+          image: File.basename(full_size_path)
         }
         frame_id = frame_id + 1
         next
@@ -42,7 +63,7 @@ def process_url(url, download_directory)
         href = "http://firefall-wiki.com#{img_path}"
         image_name = File.basename(img_path)
 
-        filename = File.join(download_directory,image_name)
+        filename = File.join(download_directory,'perks',image_name)
         unless File.exists? filename
           puts "Downloading #{href} to #{filename}"
           image = open(href).read rescue nil
@@ -59,7 +80,7 @@ def process_url(url, download_directory)
 
       json << {
         id: id,
-        type: types[i],
+        type: types[i].capitalize,
         name: name,
         desc: desc,
         cost: costs[i],
@@ -83,4 +104,4 @@ require 'json'
 puts "Starting import @ #{Time.now}"
 url = "http://firefall-wiki.com/w/Perk"
 
-process_url(url, "/Users/mmayo/projects/firefall-perks/images/perks/")
+process_url(url, "/Users/mmayo/projects/firefall-perks/images/")
