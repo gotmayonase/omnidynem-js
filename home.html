@@ -8,7 +8,9 @@
     <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
       <span class="perk-group-header perk-label-{{group}}">{{group}}</span>
       <div class="pure-g">
-        <a ng-repeat="item in items" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">{{ item.name }}</a>
+        <a ng-repeat="item in items" ng-click="togglePerk(item)" class="perk" ng-class="{ selected: item.selected, available: item.available }">
+          <img src="/images/perks/{{ item.image }}" title=" {{ item.name }}"/>
+        </a>
       </div>
     </div>
   </div>

@@ -40,17 +40,25 @@ app.controller('HomeController', function($scope, $http){
 
   $scope.donut = [defaultDataPoint];
 
-  $http.get('data.json')
+  $http.get('frames.json')
     .then(function(response){
-      $scope.perks = response.data.perks;
-      $scope.suits = response.data.suits;
+      $scope.suits = response.data;
       $scope.currentSuit = $scope.suits[0];
-      $scope.groupedPerks = _.groupBy($scope.perks, $scope.group);
 
       _.each($scope.suits, function(suit){ suit.level = 40; });
-
-      $scope.updatePerkAvailability();
+      $scope.loadPerks();
     });
+
+  $scope.loadPerks = function() {
+    $http.get('perks.json')
+      .then(function(response){
+        $scope.perks = response.data;
+        $scope.groupedPerks = _.groupBy($scope.perks, $scope.group);
+
+        $scope.updatePerkAvailability();
+      });
+  }
+
 
   $scope.regroup = function(key) {
     $scope.group = key;
@@ -87,10 +95,10 @@ app.controller('HomeController', function($scope, $http){
   };
 
   $scope.updatePerkAvailability = function() {
-
+    console.log('update')
     _.each($scope.perks, function(perk){
-      var frame = _.findWhere($scope.suits, { key: perk.frame });
-      if (perk.restrictions && perk.restrictions.length && !_.contains(perk.restrictions, $scope.currentSuit.key)) {
+      var frame = _.findWhere($scope.suits, { name: perk.frame });
+      if (perk.restrictions && perk.restrictions.length && !_.contains(perk.restrictions, $scope.currentSuit.name)) {
         perk.available = false;
 
         if (perk.selected) {
