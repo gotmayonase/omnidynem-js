@@ -8,8 +8,8 @@
   </div>
   <div class="pure-u-13-24 all-perks">
     <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
-      <div class="perk-group-header perk-label-{{ levels[group] }}">
-        <span class="title">{{ levels[group] }}</span>
+      <div class="perk-group-header perk-label-{{ costs_map[group] }}">
+        <span class="title">{{ costs_map[group] }}</span>
         <span class="cost">{{ group }}pt</span>
       </div>
       <div class="pure-g">
