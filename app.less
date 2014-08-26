@@ -5,14 +5,25 @@
 /* Component LESS */
 /* Add Component LESS Above */
 
+html, body, div[ui-view] {
+  height: 100%;
+}
+
 body {
+  color: #fff;
   font-size: .9em;
+  background: url('images/background.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+div[ui-view] {
+  background-color: rgba(0,0,0,.8 )
 }
 
 .perk {
-  width: 90px;
-  height: 90px;
-  line-height:90px;
+  width: 75px;
+  height: 75px;
+  line-height:75px;
   text-align:center;
   border: solid 5px transparent;
   border-radius: 50%;
@@ -38,4 +49,12 @@ opacity: 1
 .pure-u-5-12 {
   box-sizing: border-box;
   padding: 0 20px;
+}
+
+
+.perk-group-header {
+  display: block;
+  margin: 0 0 1em;
+  color: #2ecc71;
+  border-bottom: solid 1px #2ecc71;
 }

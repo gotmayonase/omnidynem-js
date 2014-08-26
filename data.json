@@ -18,7 +18,8 @@
       "concern": "Taste",
       "frame": "Dreadnaught",
       "level": 1,
-      "universal": true
+      "universal": true,
+      "type": "basic"
     },
     {
       "id": 2,
