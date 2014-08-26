@@ -1,61 +1,235 @@
 {
   "suits": [
     {
-      "name": "Dreadnaught"
+      "id": 1,
+      "key": "accord-dreadnaught",
+      "name": "Accord Dreadnaught"
     },
     {
-      "name": "Assault"
+      "id": 2,
+      "key": "accord-assault",
+      "name": "Accord Assault"
     },
     {
-      "name": "Biotech"
+      "id": 3,
+      "key": "accord-biotech",
+      "name": "Accord Biotech"
     }
   ],
   "perks": [
     {
       "id": 1,
-      "name": "Apple",
+      "type": "basic",
+      "name": "Neutralizer",
+      "desc": "Reduces damage taken from Poison damage types by 20%.",
       "cost": 1,
-      "concern": "Taste",
-      "frame": "Dreadnaught",
-      "level": 1,
-      "universal": true,
-      "type": "basic"
+      "level": 0,
+      "restrictions": []
     },
     {
       "id": 2,
-      "name": "Banana",
+      "type": "basic",
+      "name": "Incalescent Armor",
+      "desc": "Reduces damage taken from Fire and Blast damage types by 20%.",
       "cost": 1,
-      "concern": "Taste",
-      "frame": "Assault",
-      "level": 1,
-      "universal": true
+      "level": 0,
+      "restrictions": []
     },
     {
       "id": 3,
-      "name": "Acai Berry",
+      "type": "basic",
+      "name": "Powered Armor",
+      "desc": "Reduces damage taken from Energy damage type by 20%.",
       "cost": 1,
-      "concern": "Health",
-      "frame": "Biotech",
-      "level": 5,
-      "universal": false
+      "level": 0,
+      "restrictions": []
     },
     {
       "id": 4,
-      "name": "Avacado",
-      "cost": 5,
-      "concern": "Taste",
-      "frame": "Assault",
-      "level": 5,
-      "universal": true
+      "type": "basic",
+      "name": "Kinetic Absorption",
+      "desc": "Reduces damage taken from Bullet and Kinetic damage types by 20%.",
+      "cost": 1,
+      "level": 0,
+      "restrictions": []
     },
     {
       "id": 5,
-      "name": "Tomato",
+      "type": "basic",
+      "name": "Sprinter",
+      "desc": "Increases sprint speed by an additional 5%.",
+      "cost": 1,
+      "level": 0,
+      "restrictions": []
+    },
+    {
+      "id": 6,
+      "type": "basic",
+      "name": "Prototype Pistons",
+      "desc": "Increases base movement speed by 0.5 m a second.",
+      "cost": 1,
+      "level": 0,
+      "restrictions": []
+    },
+    {
+      "id": 7,
+      "type": "basic",
+      "name": "Fast Hands",
+      "desc": "Increases reload speed by 10%.",
+      "cost": 1,
+      "level": 0,
+      "restrictions": []
+    },
+    {
+      "id": 8,
+      "type": "basic",
+      "name": "Resilient Plating",
+      "desc": "When below 25% health, the Dreadnaught automatically regenerates 1% of their max health per second.",
+      "cost": 1,
+      "level": 0,
+      "frame": "accord-dreadnaught",
+      "restrictions": [ "accord-dreadnaught", "mammoth", "rhino" ]
+    },
+    {
+      "id": 9,
+      "type": "basic",
+      "name": "Get a Move On",
+      "desc": "Increases run speed by 15% when weapon is holstered.",
+      "cost": 1,
+      "level": 10,
+      "frame": "accord-dreadnaught",
+      "restrictions": []
+    },
+    {
+      "id": 10,
+      "type": "intermediate",
+      "name": "Knockout",
+      "desc": "Increases damage of melee attack by 20% and adds a chance to stun the target.",
+      "cost": 2,
+      "level": 20,
+      "frame": "accord-dreadnaught",
+      "restrictions": []
+    },
+    {
+      "id": 11,
+      "type": "advanced",
+      "name": "Deflection Plating",
+      "desc": "Enemy bullets that hit you have a 33% chance to ricochet and damage a nearby enemy.",
+      "cost": 5,
+      "level": 30,
+      "frame": "accord-dreadnaught",
+      "restrictions": []
+    },
+    {
+      "id": 12,
+      "type": "master",
+      "name": "Hellbent",
+      "desc": "Suffering damage causes your Battleframe offensive systems to go into overdrive, receiving a 5% damage increase every time your Battleframe is hit. This stacks up to 25% bonus damage and lasts 15 seconds.",
       "cost": 8,
-      "concern": "Taste",
-      "frame": "Assault",
-      "level": 5,
-      "universal": true
+      "level": 40,
+      "frame": "accord-dreadnaught",
+      "restrictions": []
+    },
+    {
+      "id": 13,
+      "type": "basic",
+      "name": "Nanite Absorption",
+      "desc": "Assault Exclusive Perk: gain 50% additional healing when picking up or using health packs.",
+      "cost": 1,
+      "level": 0,
+      "frame": "accord-assault",
+      "restrictions": [ "accord-assault", "firecat", "tigerclaw" ]
+    },
+    {
+      "id": 14,
+      "type": "basic",
+      "name": "Quick-Flexing Servos",
+      "desc": "Increases jump height by 3m.",
+      "cost": 1,
+      "level": 10,
+      "frame": "accord-assault",
+      "restrictions": []
+    },
+    {
+      "id": 15,
+      "type": "intermediate",
+      "name": "Plasma Enthusiast",
+      "desc": "Energy and Plasma Weapons deal 10% additional damage.",
+      "cost": 2,
+      "level": 20,
+      "frame": "accord-assault",
+      "restrictions": []
+    },
+    {
+      "id": 16,
+      "type": "advanced",
+      "name": "Invigorate",
+      "desc": "Activating an ability invigorates the user and their nearby allies; increasing movement and attack speed by 15%.",
+      "cost": 5,
+      "level": 30,
+      "frame": "accord-assault",
+      "restrictions": []
+    },
+    {
+      "id": 17,
+      "type": "master",
+      "name": "Second Wind",
+      "desc": "Rapidly killing 5 or more enemies when health is critical (Below 30% health) heals the user for 60% of their max health.",
+      "cost": 8,
+      "level": 40,
+      "frame": "accord-assault",
+      "restrictions": []
+    },
+    {
+      "id": 18,
+      "type": "basic",
+      "name": "Siphoning Unit",
+      "desc": "Biotech Exclusive Perk: Siphoning Unit heals the user for 10% of any damage or healing they inflict. Does not work with damage inflicted by healing abilities.",
+      "cost": 1,
+      "level": 0,
+      "frame": "accord-biotech",
+      "restrictions": [ "accord-biotech", "dragonfly", "recluse" ]
+    },
+    {
+      "id": 19,
+      "type": "basic",
+      "name": "Persistence",
+      "desc": "Increases health regeneration.",
+      "cost": 1,
+      "level": 10,
+      "frame": "accord-biotech",
+      "restrictions": []
+    },
+    {
+      "id": 20,
+      "type": "intermediate",
+      "name": "Bio Blending",
+      "desc": "Increases damage dealt while at full health by 10%.",
+      "cost": 2,
+      "level": 20,
+      "frame": "accord-biotech",
+      "restrictions": []
+    },
+    {
+      "id": 21,
+      "type": "advanced",
+      "name": "Catalytic Poisons",
+      "desc": "Targets hit with poison abilities have additional damage dealt as a delayed poison burst several seconds after being infected. Targets hit with poison damage take additional damage equal to 2.5x your power rating after every 3 seconds.",
+      "cost": 5,
+      "level": 30,
+      "frame": "accord-biotech",
+      "restrictions": []
+    },
+    {
+      "id": 22,
+      "type": "master",
+      "name": "Toxic Finale",
+      "desc": "Detonate a powerful poison bomb when incapacitated.",
+      "cost": 8,
+      "level": 40,
+      "frame": "accord-biotech",
+      "restrictions": []
     }
+
   ]
 }
