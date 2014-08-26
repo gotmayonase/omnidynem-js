@@ -37,6 +37,24 @@
       "frame": "Biotech",
       "level": 5,
       "universal": false
+    },
+    {
+      "id": 4,
+      "name": "Avacado",
+      "cost": 5,
+      "concern": "Taste",
+      "frame": "Assault",
+      "level": 5,
+      "universal": true
+    },
+    {
+      "id": 5,
+      "name": "Tomato",
+      "cost": 8,
+      "concern": "Taste",
+      "frame": "Assault",
+      "level": 5,
+      "universal": true
     }
   ]
 }

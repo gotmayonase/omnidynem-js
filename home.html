@@ -28,6 +28,14 @@
 
   <div class="pure-u-5-12 slotted-perks">
     {{ points }}/100
+
+    <div ang:chartjs:doughnut
+      data-chartjs-model="donut"
+      data-chartjs-width="200"
+      data-chartjs-height="200"
+      data-chartjs-animation="false"
+      data-chartjs-percentage-inner-cutout="80"></div>
+
     <div class="pure-g">
       <a ng-repeat="item in perks | filter:{ selected: true }" ng-click="togglePerk(item)" class="perk">{{ item.name }}</a>
     </div>
