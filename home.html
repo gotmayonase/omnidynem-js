@@ -1,5 +1,7 @@
 <div class="pure-g" id="container">
   <div class="pure-u-13-24 all-perks">
+    <input ng-model="shareUrl" />
+    <button ng-click="saveBuild()">Get URL</button>
     <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
       <span class="perk-group-header perk-label-{{ levels[group] }}">{{ levels[group] }}</span>
       <div class="pure-g">

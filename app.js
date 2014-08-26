@@ -14,7 +14,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller('HomeController', function($scope, $http, $filter){
+app.controller('HomeController', function($scope, $http, $filter, $location){
+
+  $scope.saveBuild = function(){
+    var perks = _.filter($scope.perks, function(perk){ return perk.selected; });
+    var output = {
+      suit: $scope.currentSuit.id,
+      perks: _.map(perks, function(perk){ return perk.id; })
+    };
+
+    $scope.shareUrl="http://localhost:9001/#/home?build=" + btoa(JSON.stringify(output));
+  }
 
   $scope.points = 0;
   $scope.max_points = 21;
@@ -66,7 +76,29 @@ app.controller('HomeController', function($scope, $http, $filter){
         $scope.perks = response.data;
         $scope.groupedPerks = _.groupBy($scope.perks, $scope.group);
 
-        $scope.updatePerkAvailability();
+        // Update builds
+        if ($location.search() && $location.search().build){
+          var decodedString = atob($location.search().build);
+          var obj = JSON.parse(decodedString);
+
+          // get suit
+          var frame = _.findWhere($scope.suits, { id: obj.suit })
+          $scope.currentSuit = frame;
+
+          $scope.updatePerkAvailability();
+
+          var perks = _.filter($scope.perks, function(perk){
+            return _.contains(obj.perks, perk.id);
+          })
+
+          _.each(perks, function(perk){
+            $scope.togglePerk(perk);
+          })
+        }
+        else
+        {
+          $scope.updatePerkAvailability();
+        }
       });
   };
 
