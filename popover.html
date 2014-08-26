@@ -1,5 +1,11 @@
 <div class="popover">
   <div class="popover-content">
-    {{ perk.desc }}
+    <div>{{ perk.name }}</div>
+    <div>Perk Point Cost: {{ perk.cost }}</div>
+    <p>{{ perk.desc }}</p>
+    <div ng-if="perk.frame">
+      Required Unlocks: <br/>
+      {{ perk.frame }} - Level {{ perk.level }}
+    </div>
   </div>
 </div>

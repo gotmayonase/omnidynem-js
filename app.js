@@ -236,7 +236,8 @@ app.directive('perk', function($popover) {
     link: function(scope, element, attrs){
       var popover = $popover(element,{
         trigger: 'hover',
-        template: 'popover.html'
+        template: 'popover.html',
+        placement: 'bottom-left'
       });
       popover.$scope.perk = scope.data;
     }
