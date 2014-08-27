@@ -1,20 +1,20 @@
 /*global Chart */
-var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate']);
+var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate','mgcrea.ngStrap.dropdown']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-    .state('home', {
-      url: '/home',
-      templateUrl: 'home.html',
-      controller: 'HomeController'
+    .state('perks', {
+      url: '/perks',
+      templateUrl: 'perks.html',
+      controller: 'PerksController'
     });
 
   /* Add New States Above */
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/perks');
 });
 
 
-app.controller('HomeController', function($scope, $http, $filter, $location){
+app.controller('PerksController', function($scope, $http, $filter, $location){
 
   $scope.saveBuild = function(){
     var perks = _.filter($scope.perks, function(perk){ return perk.selected; });
@@ -23,7 +23,7 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
       perks: _.map(perks, function(perk){ return perk.id; })
     };
 
-    $scope.shareUrl="http://localhost:9001/#/home?build=" + btoa(JSON.stringify(output));
+    $scope.shareUrl="http://localhost:9001/#/perks?build=" + btoa(JSON.stringify(output));
   };
 
   $scope.points = 0;
@@ -66,7 +66,7 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
     .then(function(response){
       $scope.suits = response.data;
       $scope.currentSuit = $scope.suits[0];
-
+      $scope.groupedSuits = _.groupBy($scope.suits, 'type');
       _.each($scope.suits, function(suit){ suit.level = 40; });
       $scope.loadPerks();
     });
@@ -103,6 +103,10 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
       });
   };
 
+  $scope.setFrame = function(frame) {
+    $scope.currentSuit = frame;
+    $scope.updatePerkAvailability();
+  };
 
   $scope.regroup = function(key) {
     $scope.group = key;

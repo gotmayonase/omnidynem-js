@@ -3,6 +3,8 @@
 @import "bower_components/bootstrap/less/mixins.less";
 @import "bower_components/bootstrap/less/tooltip.less";
 @import "bower_components/bootstrap/less/popovers.less";
+@import "bower_components/bootstrap/less/dropdowns.less";
+@import "bower_components/bootstrap/less/buttons.less";
 @import "bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "bower_components/font-awesome/fonts";
 
@@ -85,6 +87,11 @@ div[ui-view] {
   border-radius: 5px;
   height: 50px;
   margin-bottom: 20px;
+
+  button {
+    margin-top: 8px;
+    margin-left: 8px;
+  }
 }
 
 .all-perks .perk.selected {
@@ -191,4 +198,21 @@ div[ui-view] {
       margin-bottom: 0px;
     }
   }
+}
+
+.dropdown-menu > li > a {
+  // border-top: 1px solid #777777;
+  padding: 3px 25px;
+}
+
+.btn {
+  background: #333;
+  font-family: 'Eurostile Demi';
+  color: #fff;
+  border: 1px solid #777;
+}
+
+.btn:hover, .btn:focus {
+  background: #fff;
+  color: #333;
 }

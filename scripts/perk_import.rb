@@ -43,7 +43,9 @@ def process_url(url, download_directory)
           id: frame_id,
           name: frame,
           thumb: File.basename(thumb_path),
-          image: File.basename(full_size_path)
+          image: File.basename(full_size_path),
+          text: frame,
+          click: "setFrame(item)"
         }
         frame_id = frame_id + 1
         next

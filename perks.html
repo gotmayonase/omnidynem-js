@@ -1,10 +1,19 @@
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+  <a href="/" class="pure-menu-heading">
+    <img src="/images/omnidyne-m.jpg" style="filter: invert(100%); -webkit-filter: invert(100%);float: left; margin-right: 5px;" height="32" width="32"/>
+    <span style="margin-top: 7px; margin-left: 5px;display: block;">Omnidyne-M</span>
+  </a>
+  <ul style="left: 10px;">
+    <li class="pure-menu-selected"><a href="/#/perks">Perks</a></li>
+  </ul>
+</div>
+
 <div class="pure-g" id="container">
   <div class="pure-u-1-1" id="header">
-    <img src="/images/frames/{{ currentSuit.thumb }}" title="{{currentSuit.name}}" width="32" height="32" style="margin-top: 8px; margin-left: 8px;"/>
-    <select
-      ng-model="currentSuit"
-      ng-options="suit.name for suit in suits"
-      ng-change="updatePerkAvailability()" />
+    <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="groupedSuits" data-template="dropdown.tpl.html">
+      <img src="/images/frames/{{currentSuit.thumb}}" width="16" height="16" style="float: left;margin-right: 2px;"/>
+      {{ currentSuit.name }}
+    </button>
 
     <input ng-model="shareUrl" />
     <button ng-click="saveBuild()">Get URL</button>
