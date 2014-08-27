@@ -34,6 +34,8 @@
     <div ang:chartjs:doughnut
       data-chartjs-model="donut"
       data-chartjs-animation="false"
+      data-chartjs-width="400"
+      data-chartjs-height="400"
       data-chartjs-percentage-inner-cutout="80"
       data-chartjs-on-animation-complete="drawPointsLabel"
       data-chartjs-segment-stroke-color="#444"></div>
@@ -45,6 +47,7 @@
       </a>
     </div>
 
+    <h2>Required Frame Levels</h2>
     <ul>
       <li ng-repeat="(frame, level) in requirements">{{frame}}: {{level}}</li>
     </ul>

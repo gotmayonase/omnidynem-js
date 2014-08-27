@@ -24,7 +24,7 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
     };
 
     $scope.shareUrl="http://localhost:9001/#/home?build=" + btoa(JSON.stringify(output));
-  }
+  };
 
   $scope.points = 0;
   $scope.max_points = 21;
@@ -83,18 +83,18 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
           var obj = JSON.parse(decodedString);
 
           // get suit
-          var frame = _.findWhere($scope.suits, { id: obj.suit })
+          var frame = _.findWhere($scope.suits, { id: obj.suit });
           $scope.currentSuit = frame;
 
           $scope.updatePerkAvailability();
 
           var perks = _.filter($scope.perks, function(perk){
             return _.contains(obj.perks, perk.id);
-          })
+          });
 
           _.each(perks, function(perk){
             $scope.togglePerk(perk);
-          })
+          });
         }
         else
         {
@@ -182,8 +182,8 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
   $scope.drawPointsLabel = function() {
     var canvas = $('canvas').get(0);
     var ctx = canvas.getContext('2d');
-    var x = canvas.width / 2;
-    var y = canvas.height / 2 + 50;
+    var x = canvas.offsetWidth / 2;
+    var y = canvas.offsetHeight / 2 + 50;
 
     ctx.textAlign = 'center';
     ctx.font = "1.5em Noto Sans";
