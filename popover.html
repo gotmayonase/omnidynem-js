@@ -1,11 +1,14 @@
 <div class="popover">
-  <div class="popover-content">
-    <div>{{ perk.name }}</div>
+  <div class="popover-header">
+    <div class="title">{{ perk.name }}</div>
     <div>Perk Point Cost: {{ perk.cost }}</div>
-    <p>{{ perk.desc }}</p>
-    <div ng-if="perk.frame">
+    <p ng-if="!perk.available" class="locked">LOCKED</p>
+  </div>
+  <div class="popover-content">
+    <p class="description">{{ perk.desc }}</p>
+    <p ng-if="perk.frame" class="requirements">
       Required Unlocks: <br/>
       {{ perk.frame }} - Level {{ perk.level }}
-    </div>
+    </p>
   </div>
 </div>

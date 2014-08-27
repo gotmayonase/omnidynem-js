@@ -186,9 +186,9 @@ app.controller('HomeController', function($scope, $http, $filter, $location){
     var y = canvas.offsetHeight / 2 + 50;
 
     ctx.textAlign = 'center';
-    ctx.font = "1.5em Noto Sans";
+    ctx.font = "1.5em Eurostile Demi";
     ctx.fillStyle = "white";
-    ctx.fillText($scope.points + '/' + $scope.max_points + ' POINTS', x,y);
+    ctx.fillText($scope.points + '/' + $scope.max_points + ' POINTS', x, y);
     ctx.fillText('ALLOCATED',x,y+30);
   };
 

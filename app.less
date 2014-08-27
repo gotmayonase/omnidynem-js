@@ -6,6 +6,11 @@
 @import "bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "bower_components/font-awesome/fonts";
 
+@font-face {
+  font-family: 'Eurostile Demi';
+  src: url(/fonts/Eurostile-Demi.ttf);
+}
+
 /* Component LESS */
 /* Add Component LESS Above */
 
@@ -16,12 +21,12 @@ html, body, div[ui-view] {
 body {
   color: #fff;
   font-size: .9em;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Eurostile Demi', sans-serif;
   background-size: cover;
 }
 
 .pure-g [class *= "pure-u"] {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Eurostile Demi', sans-serif;
 }
 
 div[ui-view] {
@@ -145,11 +150,45 @@ div[ui-view] {
 }
 
 .popover {
-  padding: 1px;
+  padding: 5px;
   background: rgba(0,0,0,.8);
+  border: 1px solid #444;
   letter-spacing: normal;
+  font-family: 'Ubuntu', sans-serif;
+
+  .popover-header {
+    padding: 9px 9px;
+    background: #000;
+    border-bottom: 2px solid #fff;
+    line-height: 1.2em;
+
+    .title {
+      font-weight: 500;
+      font-size: 1.1em;
+    }
+
+    .locked {
+      margin: 0;
+      color: red;
+      font-weight: 500;
+    }
+  }
 
   .popover-content {
     background: #000;
+    padding: 2px 9px;
+
+    p {
+      line-height: 1.5em;
+    }
+
+    .description {
+      margin-top: 2px;
+    }
+
+    .requirements {
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
   }
 }
