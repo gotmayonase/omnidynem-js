@@ -3,7 +3,7 @@
   <li role="presentation" ng-class="{divider: item.divider}" ng-repeat="item in items | orderBy:'text'">
     <a role="menuitem" tabindex="-1" ng-href="{{item.href}}" ng-if="!item.divider && item.href" target="{{item.target || ''}}" ng-bind="item.text"></a>
     <a role="menuitem" tabindex="-1" href="javascript:void(0)" ng-if="!item.divider && item.click" ng-click="$eval(item.click);$hide()">
-      <img src="/images/frames/{{item.thumb}}" width="16" height="16" style="float: left;margin-right: 2px;"/>
+      <img ng-src="/images/frames/{{item.thumb}}" width="16" height="16" style="float: left;margin-right: 2px;"/>
       {{item.text}}
     </a>
   </li>

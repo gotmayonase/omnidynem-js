@@ -84,11 +84,9 @@ div[ui-view] {
   border-radius: 5px;
   height: 50px;
   margin-bottom: 20px;
-
-  button {
-    margin-top: 8px;
-    margin-left: 8px;
-  }
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 0px;
 }
 
 .all-perks .perk.selected {
@@ -96,22 +94,60 @@ div[ui-view] {
   background: rgba(0,30,0,1);
 }
 
-.slotted-perks .perk {
-  opacity: 1;
-  border-color: #1A8A0D;
-  background: rgba(0,30,0,1);
-}
-
-.slotted-perks .perks-container {
-  margin: 0 auto;
-  width: 100%;
-  border-top: 3px solid #444;
-  padding-top: 10px;
-}
-
 .slotted-perks {
   text-align: center;
+  box-sizing: border-box;
+
+  .perk {
+    opacity: 1;
+    border-color: #1A8A0D;
+    background: rgba(0,30,0,1);
+  }
+
+  .perks-container {
+    text-align: center;
+    border-top: 3px solid #444;
+    padding-top: 10px;
+  }
+
+  .frameName {
+    text-align: right;
+    width: 62.5%
+  }
+
+  .frameLevel {
+    text-align: left;
+    color: #1A8A0D;
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  table td {
+    padding: 5px;
+  }
+
+}
+
+.fixed {
   position: fixed;
+}
+
+
+#perksRundown {
+  box-sizing: border-box;
+  padding: 0px 10px;
+
+  dt {
+    color: #1A8A0D;
+    margin-bottom: 2px;
+  }
+
+  dd {
+    margin-bottom: 10px;
+  }
 }
 
 .pure-u-5-12, .pure-u-13-24 {

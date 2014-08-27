@@ -40,14 +40,19 @@ module.exports = function (grunt) {
     connect: {
       main: {
         options: {
-          port: 9001
+          port: grunt.option('port') || 9001,
+          hostname: '0.0.0.0'
         }
       }
     },
     watch: {
       main: {
         options: {
-            livereload: true,
+            livereload: {
+              options: {
+                hostname: '0.0.0.0'
+              }
+            },
             livereloadOnError: false,
             spawn: false
         },

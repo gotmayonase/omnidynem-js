@@ -33,7 +33,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   $scope.group  = "cost";
   $scope.selected_perks_count = 0;
   $scope.currentSuit = null;
-  $scope.requirements = {};
+  $scope.requirements = [];
   $scope.costs_map = {
     '1': 'Basic',
     '2': 'Intermediate',
@@ -157,13 +157,26 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   };
 
   $scope.updatePerkRequirements = function(selectedPerks) {
+    $scope.requirements = [];
     _.each(selectedPerks, function(perk){
       if (perk.frame) {
-        var existing_req = $scope.requirements[perk.frame];
-        $scope.requirements[perk.frame] = Math.max((existing_req || 0), perk.level);
+        requireFrame(perk.frame, perk.level);
       }
     });
+    requireFrame($scope.currentSuit.name, 40);
   };
+
+  function requireFrame(frame, level) {
+    var existing_req = _.findWhere($scope.requirements, {frame: frame });
+    if (existing_req) {
+      existing_req.level = Math.max(existing_req.level, level);
+    } else {
+      $scope.requirements.push({
+        frame: frame,
+        level: level
+      });
+    }
+  }
 
   $scope.updatePerkAvailability = function() {
     _.each($scope.perks, function(perk){
@@ -181,19 +194,21 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
       perk.available = true;
     });
+
+    $scope.updatePerkRequirements();
   };
 
   $scope.drawPointsLabel = function() {
     var canvas = $('canvas').get(0);
     var ctx = canvas.getContext('2d');
     var x = canvas.offsetWidth / 2;
-    var y = canvas.offsetHeight / 2 + 50;
+    var y = canvas.offsetHeight / 2 + 20;
 
     ctx.textAlign = 'center';
-    ctx.font = "1.5em Eurostile Demi";
+    ctx.font = "1.0em Eurostile Demi";
     ctx.fillStyle = "white";
     ctx.fillText($scope.points + '/' + $scope.max_points + ' POINTS', x, y);
-    ctx.fillText('ALLOCATED',x,y+30);
+    ctx.fillText('ALLOCATED',x,y+20);
   };
 
 });
