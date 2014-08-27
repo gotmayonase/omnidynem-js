@@ -64,10 +64,10 @@
 
         <div class="requiredFrames">
           <h2>Required Frame Levels</h2>
-          <div ng-repeat="requirement in requirements | orderBy:'level':true" class="requiredFrame">
-            <img ng-src="/images/frames/{{requirement.frame.thumb}}" title="{{requirement.frame.name}}" />
-            <span>{{requirement.level}}</span>
-          </div>
+          <requirement
+            ng-repeat="requirement in requirements | orderBy:'level':true"
+            data="requirement">
+          </requirement>
         </div>
       </div>
 

@@ -167,7 +167,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   };
 
   function requireFrame(frame, level) {
-    var _frame = _.findWhere($scope.suits, { name: frame })
+    var _frame = _.findWhere($scope.suits, { name: frame });
     var existing_req = _.findWhere($scope.requirements, { frame: _frame });
     if (existing_req) {
       existing_req.level = Math.max(existing_req.level, level);
@@ -300,6 +300,24 @@ app.directive('perk', function($popover) {
         placement: 'bottom-left'
       });
       popover.$scope.perk = scope.data;
+    }
+  };
+});
+
+app.directive('requirement', function($popover) {
+  return {
+    templateUrl: 'requirement.html',
+    restrict: 'E',
+    scope: {
+      data: '=data'
+    },
+    link: function(scope, element, attrs){
+      var popover = $popover(element,{
+        trigger: 'hover',
+        template: 'frame_popover.html',
+        placement: 'bottom-left'
+      });
+      popover.$scope.requirement = scope.data;
     }
   };
 });
