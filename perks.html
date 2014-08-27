@@ -74,7 +74,7 @@
       <div class="pure-u-1-2" id="perksRundown">
         <h2>Selected Perks</h2>
         <dl>
-          <dt ng-repeat-start="perk in perks | filter:{selected: true}">{{perk.name}}</dt>
+          <dt ng-repeat-start="perk in perks | filter:{selected: true}">{{perk.name}} (<span ng-repeat="tag in perk.tags">{{tag}}</span>)</dt>
           <dd ng-repeat-end>{{perk.desc}}</dd>
         </dl>
       </div>

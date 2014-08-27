@@ -163,6 +163,14 @@ div[ui-view] {
   dt {
     color: #1A8A0D;
     margin-bottom: 2px;
+
+    span {
+      font-size: 0.7em;
+    }
+
+    span:nth-child(n+2):before {
+      content: '/';
+    }
   }
 
   dd {
@@ -226,6 +234,16 @@ div[ui-view] {
     .title {
       font-weight: 500;
       font-size: 1.1em;
+
+      span {
+        font-size: 0.5em;
+        font-weight: 400;
+        float: right;
+      }
+
+      span:nth-child(n+2)::after {
+        content: '/'
+      }
     }
 
     .locked {

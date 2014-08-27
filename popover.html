@@ -1,6 +1,9 @@
 <div class="popover">
   <div class="popover-header">
-    <div class="title">{{ perk.name }}</div>
+    <div class="title">
+      {{ perk.name }}
+      <span ng-repeat="tag in perk.tags">{{tag}}</span>
+    </div>
     <div>Perk Point Cost: {{ perk.cost }}</div>
     <p ng-if="!perk.available" class="locked">LOCKED</p>
   </div>
