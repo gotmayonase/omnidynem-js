@@ -167,12 +167,13 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   };
 
   function requireFrame(frame, level) {
-    var existing_req = _.findWhere($scope.requirements, {frame: frame });
+    var _frame = _.findWhere($scope.suits, { name: frame })
+    var existing_req = _.findWhere($scope.requirements, { frame: _frame });
     if (existing_req) {
       existing_req.level = Math.max(existing_req.level, level);
     } else {
       $scope.requirements.push({
-        frame: frame,
+        frame: _frame,
         level: level
       });
     }

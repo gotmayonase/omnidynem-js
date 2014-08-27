@@ -1,4 +1,4 @@
-<div class="pure-menu pure-menu-open pure-menu-horizontal">
+<div class="pure-menu pure-menu-open pure-menu-horizontal " style="position: fixed">
   <a href="/" class="pure-menu-heading">
     <img src="/images/omnidyne-m.jpg" style="filter: invert(100%); -webkit-filter: invert(100%);float: left; margin-right: 5px;" height="32" width="32"/>
     <span style="margin-top: 7px; margin-left: 5px;display: block;">Omnidyne-M</span>
@@ -8,7 +8,7 @@
   </ul>
 </div>
 
-<div class="pure-g" id="container">
+<div class="pure-g" id="container" style="padding-top: 50px;">
   <div class="pure-u-1-1" id="header">
     <label>SELECT A FRAME</label>
     <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="groupedSuits" data-template="dropdown.tpl.html">
@@ -61,15 +61,14 @@
           </perk>
         </div>
 
-        <h2>Required Frame Levels</h2>
-        <table>
-          <tbody>
-            <tr ng-repeat="requirement in requirements | orderBy:'level':true">
-              <td class="frameName">{{requirement.frame}}</td>
-              <td class="frameLevel">{{requirement.level}}</td>
-            </tr>
-          </tbody>
-        </table>
+
+        <div class="requiredFrames">
+          <h2>Required Frame Levels</h2>
+          <div ng-repeat="requirement in requirements | orderBy:'level':true" class="requiredFrame">
+            <img ng-src="/images/frames/{{requirement.frame.thumb}}" title="{{requirement.frame.name}}" />
+            <span>{{requirement.level}}</span>
+          </div>
+        </div>
       </div>
 
       <div class="pure-u-1-2" id="perksRundown">

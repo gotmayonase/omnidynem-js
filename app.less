@@ -31,6 +31,10 @@ body {
   font-family: 'Eurostile Demi', sans-serif;
 }
 
+.pure-g {
+  display: block;
+}
+
 div[ui-view] {
 
 }
@@ -54,6 +58,7 @@ div[ui-view] {
   letter-spacing: normal;
   margin-bottom: 5px;
   margin-right: 5px;
+  display: inline-block;
 }
 
 #points {
@@ -66,6 +71,7 @@ div[ui-view] {
 
 .perk-group {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .all-perks .perk.available {
@@ -108,16 +114,12 @@ div[ui-view] {
     text-align: center;
     border-top: 3px solid #444;
     padding-top: 10px;
+    min-height: 130px;
   }
 
   .frameName {
     text-align: right;
     width: 62.5%
-  }
-
-  .frameLevel {
-    text-align: left;
-    color: #1A8A0D;
   }
 
   table {
@@ -129,6 +131,24 @@ div[ui-view] {
     padding: 5px;
   }
 
+  .requiredFrames {
+
+    .requiredFrame {
+      display: inline-block;
+      width: 48px;
+      box-sizing: border-box;
+      padding: 5px 0 0;
+      margin-bottom: 5px;
+      margin-right: 5px;
+
+      span {
+        color: #1A8A0D;
+      }
+    }
+  }
+
+
+
 }
 
 .fixed {
@@ -138,7 +158,7 @@ div[ui-view] {
 
 #perksRundown {
   box-sizing: border-box;
-  padding: 0px 10px;
+  padding: 0px 15px;
 
   dt {
     color: #1A8A0D;
@@ -162,6 +182,7 @@ div[ui-view] {
   color: #2ecc71;
   border-bottom: solid 1px #2ecc71;
   font-size: 1.5em;
+  text-align: left;
 }
 
 .perk-group-header .cost {
