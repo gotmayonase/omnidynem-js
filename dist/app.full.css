@@ -2135,6 +2135,9 @@ body {
   background: #001e00;
   opacity: 1;
 }
+.tabRight {
+  margin-left: 18px;
+}
 #points {
   font-size: 1.5em;
   width: 150px;
@@ -2294,10 +2297,9 @@ body {
   font-weight: 500;
   font-size: 1.1em;
 }
-.popover .popover-header .title span {
-  font-size: 0.5em;
-  font-weight: 400;
+.popover .popover-header .title img {
   float: right;
+  margin-left: 5px;
 }
 .popover .popover-header .title span:nth-child(n+2)::after {
   content: '/';
