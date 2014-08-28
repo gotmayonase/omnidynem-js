@@ -1,6 +1,11 @@
 {
   "name": "Perks",
   "version": "0.0.0",
+  "description": "A perks builder for Firefall",
+  "repository": "https://github.com/jkappers/firefall-perks",
+  "engines": {
+    "node": "0.10.x"
+  },
   "devDependencies": {
     "grunt": "~0.4",
     "grunt-dom-munger": "~3.4",
