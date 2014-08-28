@@ -26,6 +26,9 @@
         "expect": true,
         "xdescribe": true,
         "xit": true,
-        "spyOn": true
+        "spyOn": true,
+        "require": true,
+        "process": true,
+        "__dirname": true
     }
 }

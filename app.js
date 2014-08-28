@@ -41,6 +41,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     '5': 'Advanced',
     '8': 'Master'
   };
+  $scope.loaded=false;
 
   $scope.tags = [
     { name: 'All',      image: null, click: 'filterPerks(null)' },
@@ -73,17 +74,19 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
   $scope.donut = [defaultDataPoint];
 
-  $http.get('frames.json')
+  $http.get('data/frames.json')
     .then(function(response){
       $scope.suits = response.data;
       $scope.currentSuit = $scope.suits[0];
       $scope.groupedSuits = _.groupBy($scope.suits, 'type');
       _.each($scope.suits, function(suit){ suit.level = 40; });
       $scope.loadPerks();
+      $scope.loaded = true;
+      $scope.drawPointsLabel();
     });
 
   $scope.loadPerks = function() {
-    $http.get('perks.json')
+    $http.get('data/perks.json')
       .then(function(response){
         $scope.perks = response.data;
         $scope.allPerks = $scope.perks;
@@ -225,16 +228,18 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   };
 
   $scope.drawPointsLabel = function() {
-    var canvas = $('canvas').get(0);
-    var ctx = canvas.getContext('2d');
-    var x = canvas.offsetWidth / 2;
-    var y = canvas.offsetHeight / 2 + 20;
+    if ($scope.loaded) {
+      var canvas = $('canvas').get(0);
+      var ctx = canvas.getContext('2d');
+      var x = canvas.offsetWidth / 2;
+      var y = canvas.offsetHeight / 2 + 20;
 
-    ctx.textAlign = 'center';
-    ctx.font = "1.0em Eurostile Demi";
-    ctx.fillStyle = "white";
-    ctx.fillText($scope.points + '/' + $scope.max_points + ' POINTS', x, y);
-    ctx.fillText('ALLOCATED',x,y+20);
+      ctx.textAlign = 'center';
+      ctx.font = "1.0em Eurostile Demi";
+      ctx.fillStyle = "white";
+      ctx.fillText($scope.points + '/' + $scope.max_points + ' POINTS', x, y);
+      ctx.fillText('ALLOCATED',x,y+20);
+    }
   };
 
 });

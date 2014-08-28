@@ -98,8 +98,11 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {src: ['img/**'], dest: 'dist/'},
-          {src: ['bower_components/font-awesome/fonts/**'], dest: 'dist/',filter:'isFile',expand:true}
+          {src: ['images/**'], dest: 'dist/'},
+          {src: ['fonts/**'], dest: 'dist/'},
+          {src: ['bower_components/font-awesome/fonts/**'], dest: 'dist/',filter:'isFile',expand:true},
+          {src: ['data/**'], dest: 'dist/'},
+          {src: ['temp/app.css'], dest: 'dist/app.full.css'}
           //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'dist/'},
           //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'dist/css/',flatten:true,expand:true},
           //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'dist/'}
@@ -130,7 +133,7 @@ module.exports = function (grunt) {
     },
     cssmin: {
       main: {
-        src:['temp/app.css','<%= dom_munger.data.appcss %>'],
+        src:['<%= dom_munger.data.appcss %>','temp/app.css'],
         dest:'dist/app.full.min.css'
       }
     },
@@ -163,9 +166,12 @@ module.exports = function (grunt) {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true
         },
-        files: {
-          'dist/index.html': 'dist/index.html'
-        }
+        files: [{
+          expand:true,
+          cwd: 'dist/',
+          src: ['index.html'],
+          dest: 'dist/'
+        }]
       }
     },
     imagemin: {
@@ -199,7 +205,8 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build',['jshint','clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngmin','uglify','copy','htmlmin','imagemin','clean:after']);
+  grunt.registerTask('build',['jshint','clean:before','less','dom_munger:read','ngtemplates','cssmin','concat','ngmin','uglify','dom_munger:update','copy','htmlmin','imagemin','clean:after']);
+  // grunt.registerTask('build',['jshint','clean:before','less','dom_munger:read','ngtemplates','cssmin','concat','dom_munger:update','copy','htmlmin','imagemin','clean:after']);
   grunt.registerTask('serve', ['dom_munger:read','jshint','connect', 'watch']);
   grunt.registerTask('test',['dom_munger:read','karma:all_tests']);
 
