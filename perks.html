@@ -26,7 +26,7 @@
   </div>
   <div class="pure-u-5-12 all-perks">
 
-    <div class="perk-group" ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
+    <div class="perk-group " ng-repeat="(group, items) in groupedPerks | orderBy:groupOrder">
       <div class="perk-group-header perk-label-{{ costs_map[group] }}">
         <span class="title">{{ costs_map[group] }}</span>
         <span class="cost">{{ group }} <img src="/images/perk_points.png" width="16" height="16" /></span>
