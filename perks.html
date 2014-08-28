@@ -74,7 +74,7 @@
         <dl>
           <div ng-repeat="perk in allPerks | filter:{selected: true}" class="perkDefinition">
             <perk
-              ng-click="togglePerk(item)"
+              ng-click="togglePerk(perk)"
               data="perk"
               class="perk selected">
             </perk>
