@@ -18,7 +18,7 @@
 
     <label>FILTER PERKS</label>
     <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="tags" data-template="dropdowns/tags.tpl.html">
-      <img ng-src="/images/tags/{{currentTag.name}}.png" width="18" height="18" style="float: left;margin-right: 2px;" ng-if="currentTag"/>
+      <img ng-src="/images/tags/{{currentTag.thumb}}" width="18" height="18" style="float: left;margin-right: 2px;" ng-if="currentTag"/>
       {{ currentTag.name || 'ALL' }}
     </button>
 
