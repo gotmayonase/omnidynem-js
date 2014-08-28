@@ -20,6 +20,11 @@ html, body, div[ui-view] {
   height: 100%;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: #fff;
   font-size: .9em;
@@ -132,6 +137,7 @@ div[ui-view] {
   }
 
   .requiredFrames {
+    border-top: 3px solid #444;
 
     .requiredFrame {
       display: inline-block;
@@ -159,6 +165,21 @@ div[ui-view] {
 #perksRundown {
   box-sizing: border-box;
   padding: 0px 15px;
+
+  .perk {
+    float: left;
+    width: 48px;
+    height: 48px;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .perkDefinition {
+    clear: both;
+  }
 
   dt {
     color: #1A8A0D;

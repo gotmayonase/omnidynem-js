@@ -1,5 +1,5 @@
 /*global Chart */
-var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate','mgcrea.ngStrap.dropdown']);
+var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate','mgcrea.ngStrap.helpers.dimensions']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -30,6 +30,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   $scope.max_points = 21;
   $scope.suits  = [];
   $scope.perks  = [];
+  $scope.allPerks = [];
   $scope.group  = "cost";
   $scope.selected_perks_count = 0;
   $scope.currentSuit = null;
@@ -40,6 +41,16 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     '5': 'Advanced',
     '8': 'Master'
   };
+
+  $scope.tags = [
+    { name: 'All',      image: null, click: 'filterPerks(null)' },
+    { name: 'Damage',   image: null, click: 'filterPerks(item)' },
+    { name: 'Defense',  image: null, click: 'filterPerks(item)' },
+    { name: 'Healing',  image: null, click: 'filterPerks(item)' },
+    { name: 'Movement', image: null, click: 'filterPerks(item)' },
+    { name: 'Other',    image: null, click: 'filterPerks(item)' }
+  ];
+  $scope.currentTag = null;
 
   var defaultDataPoint = {
     id:    999,
@@ -75,6 +86,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     $http.get('perks.json')
       .then(function(response){
         $scope.perks = response.data;
+        $scope.allPerks = $scope.perks;
         $scope.groupedPerks = _.groupBy($scope.perks, $scope.group);
 
         // Update builds
@@ -106,6 +118,19 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   $scope.setFrame = function(frame) {
     $scope.currentSuit = frame;
     $scope.updatePerkAvailability();
+  };
+
+  $scope.filterPerks = function(tag) {
+    $scope.currentTag = tag;
+    if (tag == null) {
+      $scope.perks = $scope.allPerks;
+    } else {
+      $scope.perks = _.filter($scope.allPerks, function(perk){
+        return _.contains(perk.tags, tag.name);
+      });
+    }
+
+    $scope.groupedPerks = _.groupBy($scope.perks, $scope.group);
   };
 
   $scope.regroup = function(key) {
@@ -142,7 +167,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
       $scope.selected_perks_count += 1;
     }
 
-    var selected = $filter('filter')($scope.perks,{ selected: true });
+    var selected = $filter('filter')($scope.allPerks,{ selected: true });
     var sorted = $filter('orderBy')(selected,'cost');
     $scope.donut = _.map(sorted, function(perk){
       return {
@@ -180,7 +205,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   }
 
   $scope.updatePerkAvailability = function() {
-    _.each($scope.perks, function(perk){
+    _.each($scope.allPerks, function(perk){
       var frame = _.findWhere($scope.suits, { name: perk.frame });
       if (perk.restrictions && perk.restrictions.length && !_.contains(perk.restrictions, $scope.currentSuit.name)) {
         perk.available = false;
@@ -195,8 +220,8 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
       perk.available = true;
     });
-
-    $scope.updatePerkRequirements();
+    var selected = $filter('filter')($scope.allPerks,{ selected: true });
+    $scope.updatePerkRequirements(selected);
   };
 
   $scope.drawPointsLabel = function() {

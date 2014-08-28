@@ -1,0 +1,7 @@
+<ul tabindex="-1" class="dropdown-menu" role="menu">
+  <li role="presentation" ng-class="{divider: item.divider}" ng-repeat="item in content | orderBy:'name'">
+    <a role="menuitem" tabindex="-1" href="javascript:void(0)" ng-if="!item.divider && item.click" ng-click="$eval(item.click);$hide()">
+      {{item.name}}
+    </a>
+  </li>
+</ul>

@@ -8,12 +8,17 @@
   </ul>
 </div>
 
-<div class="pure-g" id="container" style="padding-top: 50px;">
+<div class="pure-g" id="container" style="padding-top: 50px; position: relative;">
   <div class="pure-u-1-1" id="header">
     <label>SELECT A FRAME</label>
-    <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="groupedSuits" data-template="dropdown.tpl.html">
+    <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="groupedSuits" data-template="dropdowns/frames.tpl.html">
       <img ng-src="/images/frames/{{currentSuit.thumb}}" width="16" height="16" style="float: left;margin-right: 2px;"/>
       {{ currentSuit.name }}
+    </button>
+
+    <label>FILTER PERKS</label>
+    <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="tags" data-template="dropdowns/tags.tpl.html">
+      {{ currentTag.name || 'ALL' }}
     </button>
 
     <input ng-model="shareUrl" />
@@ -36,12 +41,13 @@
         </perk>
       </div>
     </div>
+
   </div>
 
-  <div class="pure-u-7-12 fixed">
+  <div class="pure-u-7-12" bs-affix data-offset-top="-50" id="fixedBox">
     <div class="pure-g">
       <div class="pure-u-1-2 slotted-perks">
-        <img src="/images/frames/{{ currentSuit.image }}" title="{{currentSuit.name}}" width="250" height="250" style="opacity: 0.12;position: absolute;"/>
+        <img ng-src="/images/frames/{{ currentSuit.image }}" title="{{currentSuit.name}}" width="250" height="250" style="opacity: 0.12;position: absolute;"/>
         <div ang:chartjs:doughnut
           data-chartjs-model="donut"
           data-chartjs-animation="false"
@@ -52,15 +58,6 @@
           data-chartjs-segment-stroke-color="#444"></div>
 
         <span id="points">{{ selected_perks_count }}/10</span>
-        <div class="pure-g perks-container">
-          <perk
-            ng-repeat="item in perks | filter:{ selected: true }"
-            ng-click="togglePerk(item)"
-            data="item"
-            class="perk selected">
-          </perk>
-        </div>
-
 
         <div class="requiredFrames">
           <h2>Required Frame Levels</h2>
@@ -74,8 +71,15 @@
       <div class="pure-u-1-2" id="perksRundown">
         <h2>Selected Perks</h2>
         <dl>
-          <dt ng-repeat-start="perk in perks | filter:{selected: true}">{{perk.name}} (<span ng-repeat="tag in perk.tags">{{tag}}</span>)</dt>
-          <dd ng-repeat-end>{{perk.desc}}</dd>
+          <div ng-repeat="perk in allPerks | filter:{selected: true}" class="perkDefinition">
+            <perk
+              ng-click="togglePerk(item)"
+              data="perk"
+              class="perk selected">
+            </perk>
+            <dt>{{perk.name}} (<span ng-repeat="tag in perk.tags">{{tag}}</span>)</dt>
+            <dd>{{perk.desc}}</dd>
+          </div>
         </dl>
       </div>
     </div>
