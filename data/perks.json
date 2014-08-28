@@ -8,7 +8,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_neutralizer.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 2,
   "type": "Basic",
@@ -19,7 +19,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_achievement_chosen_hunter.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 3,
   "type": "Basic",
@@ -30,7 +30,7 @@
   "frame": "Accord Dreadnaught",
   "restrictions": ["Accord Dreadnaught"],
   "image": "48px-Icon_perk_passive_resilient_plating.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 4,
   "type": "Basic",
@@ -41,7 +41,7 @@
   "frame": "Accord Dreadnaught",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_get_a_move_on.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 5,
   "type": "Intermediate",
@@ -52,7 +52,7 @@
   "frame": "Accord Dreadnaught",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_knockout.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 6,
   "type": "Advanced",
@@ -63,7 +63,7 @@
   "frame": "Accord Dreadnaught",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_deflection_plating.png",
-  "tags": [ "Defense", "Damage" ]
+  "tags": [ "defense", "damage" ]
 }, {
   "id": 7,
   "type": "Master",
@@ -74,7 +74,7 @@
   "frame": "Accord Dreadnaught",
   "restrictions": [],
   "image": "48px-Icon_perk_master_hellbent.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 8,
   "type": "Basic",
@@ -85,7 +85,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_incalescent_armor.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 9,
   "type": "Basic",
@@ -96,7 +96,7 @@
   "frame": "Accord Assault",
   "restrictions": ["Accord Assault"],
   "image": "48px-Icon_perk_passive_nanite_absorption.png",
-  "tags": [ "Defense", "Healing" ]
+  "tags": [ "defense", "healing" ]
 }, {
   "id": 10,
   "type": "Basic",
@@ -107,7 +107,7 @@
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_quick-flexing_servos.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 11,
   "type": "Intermediate",
@@ -118,7 +118,7 @@
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_plasma_enthusiast.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 12,
   "type": "Advanced",
@@ -129,7 +129,7 @@
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_invigorate.png",
-  "tags": [ "Movement", "Damage" ]
+  "tags": [ "movement", "damage" ]
 }, {
   "id": 13,
   "type": "Master",
@@ -140,7 +140,7 @@
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_master_second_wind.png",
-  "tags": [ "Defense", "Healing" ]
+  "tags": [ "defense", "healing" ]
 }, {
   "id": 14,
   "type": "Basic",
@@ -151,7 +151,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_powered_armor.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 15,
   "type": "Basic",
@@ -162,7 +162,7 @@
   "frame": "Accord Biotech",
   "restrictions": ["Accord Biotech"],
   "image": "48px-Icon_perk_passive_siphoning_unit.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 16,
   "type": "Basic",
@@ -173,7 +173,7 @@
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_persistence.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 17,
   "type": "Intermediate",
@@ -184,7 +184,7 @@
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_bio_blending.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 18,
   "type": "Advanced",
@@ -195,7 +195,7 @@
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_catalytic_poisons.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 19,
   "type": "Master",
@@ -206,7 +206,7 @@
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_master_toxic_finale.png",
-  "tags": [ "Damage", "Defense" ]
+  "tags": [ "damage", "defense" ]
 }, {
   "id": 20,
   "type": "Basic",
@@ -217,7 +217,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_kinetic_absorption.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 21,
   "type": "Basic",
@@ -228,7 +228,7 @@
   "frame": "Accord Engineer",
   "restrictions": ["Accord Engineer"],
   "image": "48px-Icon_perk_passive_repairing_nanites.png",
-  "tags": [ "Defense", "Healing" ]
+  "tags": [ "defense", "healing" ]
 }, {
   "id": 22,
   "type": "Basic",
@@ -239,7 +239,7 @@
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_fuel_injectors.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 23,
   "type": "Intermediate",
@@ -250,7 +250,7 @@
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_resonating_shields.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 24,
   "type": "Advanced",
@@ -261,7 +261,7 @@
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_mounted_firepower.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 25,
   "type": "Master",
@@ -272,7 +272,7 @@
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_master_hyper_kinesis_surge.png",
-  "tags": [ "Defense", "Movement" ]
+  "tags": [ "defense", "movement" ]
 }, {
   "id": 26,
   "type": "Basic",
@@ -283,7 +283,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_sprinter.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 27,
   "type": "Basic",
@@ -294,7 +294,7 @@
   "frame": "Accord Recon",
   "restrictions": ["Accord Recon"],
   "image": "48px-Icon_perk_passive_regenerative_plating.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 28,
   "type": "Basic",
@@ -305,7 +305,7 @@
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_head_hunter.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 29,
   "type": "Intermediate",
@@ -316,7 +316,7 @@
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_sin_precision.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 30,
   "type": "Advanced",
@@ -327,7 +327,7 @@
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_tactician.png",
-  "tags": [ "Defense", "Damage" ]
+  "tags": [ "defense", "damage" ]
 }, {
   "id": 31,
   "type": "Master",
@@ -338,7 +338,7 @@
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_master_energy_spikes.png",
-  "tags": [ "Damage", "Defense" ]
+  "tags": [ "damage", "defense" ]
 }, {
   "id": 32,
   "type": "Basic",
@@ -349,7 +349,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_prototype_pistons.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 33,
   "type": "Basic",
@@ -360,7 +360,7 @@
   "frame": "Tigerclaw",
   "restrictions": ["Tigerclaw"],
   "image": "48px-Icon_perk_passive_auxiliary_tanks.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 34,
   "type": "Basic",
@@ -371,7 +371,7 @@
   "frame": "Tigerclaw",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_quick_hands.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 35,
   "type": "Intermediate",
@@ -382,7 +382,7 @@
   "frame": "Tigerclaw",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_quick-pivot_servos.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 36,
   "type": "Advanced",
@@ -393,7 +393,7 @@
   "frame": "Tigerclaw",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_eye_of_the_tiger.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 37,
   "type": "Master",
@@ -404,7 +404,7 @@
   "frame": "Tigerclaw",
   "restrictions": [],
   "image": "48px-Icon_perk_master_hunter.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 38,
   "type": "Basic",
@@ -415,7 +415,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_fast_hands.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 39,
   "type": "Basic",
@@ -426,7 +426,7 @@
   "frame": "Firecat",
   "restrictions": ["Firecat"],
   "image": "48px-Icon_perk_passive_incinerator.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 40,
   "type": "Basic",
@@ -437,7 +437,7 @@
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_collateral_analytics.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 41,
   "type": "Intermediate",
@@ -448,7 +448,7 @@
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_epicenter.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 42,
   "type": "Advanced",
@@ -459,7 +459,7 @@
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_corpse_combustion.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 43,
   "type": "Master",
@@ -470,7 +470,7 @@
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_master_flame_buffer.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 44,
   "type": "Basic",
@@ -481,7 +481,7 @@
   "frame": "Recluse",
   "restrictions": ["Recluse"],
   "image": "48px-Icon_perk_passive_necrotic_poison.png",
-  "tags": [ "Defense", "Damage" ]
+  "tags": [ "defense", "damage" ]
 }, {
   "id": 45,
   "type": "Basic",
@@ -492,7 +492,7 @@
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_virus.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 46,
   "type": "Intermediate",
@@ -503,7 +503,7 @@
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_necrotic_bite.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 47,
   "type": "Advanced",
@@ -514,7 +514,7 @@
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_potent_toxins.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 48,
   "type": "Master",
@@ -525,7 +525,7 @@
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_master_anatomy_lessons.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 49,
   "type": "Basic",
@@ -536,7 +536,7 @@
   "frame": "Dragonfly",
   "restrictions": ["Dragonfly"],
   "image": "48px-Icon_perk_passive_rally.png",
-  "tags": [ "Healing", "Damage" ]
+  "tags": [ "healing", "damage" ]
 }, {
   "id": 50,
   "type": "Basic",
@@ -547,7 +547,7 @@
   "frame": "Dragonfly",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_bio_reserves.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 51,
   "type": "Intermediate",
@@ -558,7 +558,7 @@
   "frame": "Dragonfly",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_frequent_patient.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 52,
   "type": "Advanced",
@@ -569,7 +569,7 @@
   "frame": "Dragonfly",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_combat_medic.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 53,
   "type": "Master",
@@ -580,7 +580,7 @@
   "frame": "Dragonfly",
   "restrictions": [],
   "image": "48px-Icon_perk_master_auto-repair.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 54,
   "type": "Basic",
@@ -591,7 +591,7 @@
   "frame": "Rhino",
   "restrictions": ["Rhino"],
   "image": "48px-Icon_perk_passive_personal_shield.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 55,
   "type": "Basic",
@@ -602,7 +602,7 @@
   "frame": "Rhino",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_back_in_action.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 56,
   "type": "Intermediate",
@@ -613,7 +613,7 @@
   "frame": "Rhino",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_stampede.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 57,
   "type": "Advanced",
@@ -624,7 +624,7 @@
   "frame": "Rhino",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_kill_stealer.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 58,
   "type": "Master",
@@ -635,7 +635,7 @@
   "frame": "Rhino",
   "restrictions": [],
   "image": "48px-Icon_perk_master_hero.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 59,
   "type": "Basic",
@@ -646,7 +646,7 @@
   "frame": "Mammoth",
   "restrictions": ["Mammoth"],
   "image": "48px-Icon_perk_passive_imminent_threat.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 60,
   "type": "Basic",
@@ -657,7 +657,7 @@
   "frame": "Mammoth",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_harden.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 61,
   "type": "Intermediate",
@@ -668,7 +668,7 @@
   "frame": "Mammoth",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_shields_up.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 62,
   "type": "Advanced",
@@ -679,7 +679,7 @@
   "frame": "Mammoth",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_thick_hide.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 63,
   "type": "Master",
@@ -690,7 +690,7 @@
   "frame": "Mammoth",
   "restrictions": [],
   "image": "48px-Icon_perk_master_health_surge.png",
-  "tags": [ "Healing" ]
+  "tags": [ "healing" ]
 }, {
   "id": 64,
   "type": "Basic",
@@ -701,7 +701,7 @@
   "frame": "Nighthawk",
   "restrictions": ["Nighthawk"],
   "image": "48px-Icon_perk_passive_ambush.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 65,
   "type": "Basic",
@@ -712,7 +712,7 @@
   "frame": "Nighthawk",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_ballistics_expert.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 66,
   "type": "Intermediate",
@@ -723,7 +723,7 @@
   "frame": "Nighthawk",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_spec._ops.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 67,
   "type": "Advanced",
@@ -734,7 +734,7 @@
   "frame": "Nighthawk",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_sure_shot.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 68,
   "type": "Master",
@@ -745,7 +745,7 @@
   "frame": "Nighthawk",
   "restrictions": [],
   "image": "48px-Icon_perk_master_concussion_shells.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 69,
   "type": "Basic",
@@ -756,7 +756,7 @@
   "frame": "Raptor",
   "restrictions": ["Raptor"],
   "image": "48px-Icon_perk_passive_conduit.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 70,
   "type": "Basic",
@@ -767,7 +767,7 @@
   "frame": "Raptor",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_grenadier.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 71,
   "type": "Intermediate",
@@ -778,7 +778,7 @@
   "frame": "Raptor",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_physicist.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 72,
   "type": "Advanced",
@@ -789,7 +789,7 @@
   "frame": "Raptor",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_energy_shaping.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 73,
   "type": "Master",
@@ -800,7 +800,7 @@
   "frame": "Raptor",
   "restrictions": [],
   "image": "48px-Icon_perk_master_arcing_bolts.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 74,
   "type": "Basic",
@@ -811,7 +811,7 @@
   "frame": "Bastion",
   "restrictions": ["Bastion"],
   "image": "48px-Icon_perk_passive_overseer.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 75,
   "type": "Basic",
@@ -822,7 +822,7 @@
   "frame": "Bastion",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_hardware_genius.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 76,
   "type": "Intermediate",
@@ -833,7 +833,7 @@
   "frame": "Bastion",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_resilient_alloys.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 77,
   "type": "Advanced",
@@ -844,7 +844,7 @@
   "frame": "Bastion",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_sentient_armor.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 78,
   "type": "Master",
@@ -855,7 +855,7 @@
   "frame": "Bastion",
   "restrictions": [],
   "image": "48px-Icon_perk_master_deployable_repulsor.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 79,
   "type": "Basic",
@@ -866,7 +866,7 @@
   "frame": "Electron",
   "restrictions": ["Electron"],
   "image": "48px-Icon_perk_passive_dynamic_relay.png",
-  "tags": [ "Defense", "Damage" ]
+  "tags": [ "defense", "damage" ]
 }, {
   "id": 80,
   "type": "Basic",
@@ -877,7 +877,7 @@
   "frame": "Electron",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_combustion_boost.png",
-  "tags": [ "Movement" ]
+  "tags": [ "movement" ]
 }, {
   "id": 81,
   "type": "Intermediate",
@@ -888,7 +888,7 @@
   "frame": "Electron",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_augmented_shield_generators.png",
-  "tags": [ "Defense" ]
+  "tags": [ "defense" ]
 }, {
   "id": 82,
   "type": "Advanced",
@@ -899,7 +899,7 @@
   "frame": "Electron",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_high_yield_capacitors.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 83,
   "type": "Master",
@@ -910,7 +910,7 @@
   "frame": "Electron",
   "restrictions": [],
   "image": "48px-Icon_perk_master_rapid_kinesis_assemblage.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 84,
   "type": "Basic",
@@ -921,7 +921,7 @@
   "frame": "Arsenal",
   "restrictions": ["Arsenal"],
   "image": "48px-Icon_perk_passive_munitions.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 85,
   "type": "Basic",
@@ -932,7 +932,7 @@
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_combat_veteran.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 86,
   "type": "Intermediate",
@@ -943,7 +943,7 @@
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_stopping_power.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }, {
   "id": 87,
   "type": "Advanced",
@@ -954,7 +954,7 @@
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_fully_loaded.png",
-  "tags": [ "Utility" ]
+  "tags": [ "utility" ]
 }, {
   "id": 88,
   "type": "Master",
@@ -965,5 +965,5 @@
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_master_explosives_expert.png",
-  "tags": [ "Damage" ]
+  "tags": [ "damage" ]
 }]

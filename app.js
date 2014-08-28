@@ -44,12 +44,12 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   $scope.loaded=false;
 
   $scope.tags = [
-    { name: 'All',      image: null, click: 'filterPerks(null)', thumb: null },
-    { name: 'Damage',   image: null, click: 'filterPerks(item)', thumb: 'damage.png' },
-    { name: 'Defense',  image: null, click: 'filterPerks(item)', thumb: 'defense.png' },
-    { name: 'Healing',  image: null, click: 'filterPerks(item)', thumb: 'healing.png' },
-    { name: 'Movement', image: null, click: 'filterPerks(item)', thumb: 'movement.png' },
-    { name: 'Utility',  image: null, click: 'filterPerks(item)', thumb: 'utility.png' }
+    { name: 'All',      image: null, click: 'filterPerks(null)', key: 'all',      thumb: null },
+    { name: 'Damage',   image: null, click: 'filterPerks(item)', key: 'damage',   thumb: 'damage.png' },
+    { name: 'Defense',  image: null, click: 'filterPerks(item)', key: 'defense',  thumb: 'defense.png' },
+    { name: 'Healing',  image: null, click: 'filterPerks(item)', key: 'healing',  thumb: 'healing.png' },
+    { name: 'Movement', image: null, click: 'filterPerks(item)', key: 'movement', thumb: 'movement.png' },
+    { name: 'Utility',  image: null, click: 'filterPerks(item)', key: 'utility',  thumb: 'utility.png' }
   ];
   $scope.currentTag = null;
 
@@ -129,7 +129,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
       $scope.perks = $scope.allPerks;
     } else {
       $scope.perks = _.filter($scope.allPerks, function(perk){
-        return _.contains(perk.tags, tag.name);
+        return _.contains(perk.tags, tag.key);
       });
     }
 

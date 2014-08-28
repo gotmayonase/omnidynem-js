@@ -101,8 +101,7 @@ module.exports = function (grunt) {
           {src: ['images/**'], dest: 'dist/'},
           {src: ['fonts/**'], dest: 'dist/'},
           {src: ['bower_components/font-awesome/fonts/**'], dest: 'dist/',filter:'isFile',expand:true},
-          {src: ['data/**'], dest: 'dist/'},
-          {src: ['temp/app.css'], dest: 'dist/app.full.css'}
+          {src: ['data/**'], dest: 'dist/'}
           //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'dist/'},
           //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'dist/css/',flatten:true,expand:true},
           //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'dist/'}
