@@ -44,12 +44,12 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   $scope.loaded=false;
 
   $scope.tags = [
-    { name: 'All',      image: null, click: 'filterPerks(null)' },
-    { name: 'Damage',   image: null, click: 'filterPerks(item)' },
-    { name: 'Defense',  image: null, click: 'filterPerks(item)' },
-    { name: 'Healing',  image: null, click: 'filterPerks(item)' },
-    { name: 'Movement', image: null, click: 'filterPerks(item)' },
-    { name: 'Other',    image: null, click: 'filterPerks(item)' }
+    { name: 'All',      image: null, click: 'filterPerks(null)', thumb: null },
+    { name: 'Damage',   image: null, click: 'filterPerks(item)', thumb: 'damage.png' },
+    { name: 'Defense',  image: null, click: 'filterPerks(item)', thumb: 'defense.png' },
+    { name: 'Healing',  image: null, click: 'filterPerks(item)', thumb: 'healing.png' },
+    { name: 'Movement', image: null, click: 'filterPerks(item)', thumb: 'movement.png' },
+    { name: 'Utility',  image: null, click: 'filterPerks(item)', thumb: 'utility.png' }
   ];
   $scope.currentTag = null;
 

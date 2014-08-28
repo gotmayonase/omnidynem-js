@@ -2,7 +2,7 @@
   <div class="popover-header">
     <div class="title">
       {{ perk.name }}
-      <span ng-repeat="tag in perk.tags">{{tag}}</span>
+      <img width="24" height="24" ng-repeat="tag in perk.tags" ng-src="/images/tags/{{tag}}.png" />
     </div>
     <div>Perk Point Cost: {{ perk.cost }}</div>
     <p ng-if="!perk.available" class="locked">LOCKED</p>

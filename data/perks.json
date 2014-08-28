@@ -316,7 +316,7 @@
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_sin_precision.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 30,
   "type": "Advanced",
@@ -371,7 +371,7 @@
   "frame": "Tigerclaw",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_quick_hands.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 35,
   "type": "Intermediate",
@@ -415,7 +415,7 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_fast_hands.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 39,
   "type": "Basic",
@@ -514,7 +514,7 @@
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_potent_toxins.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 48,
   "type": "Master",
@@ -602,7 +602,7 @@
   "frame": "Rhino",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_back_in_action.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 56,
   "type": "Intermediate",
@@ -613,7 +613,7 @@
   "frame": "Rhino",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_stampede.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 57,
   "type": "Advanced",
@@ -745,7 +745,7 @@
   "frame": "Nighthawk",
   "restrictions": [],
   "image": "48px-Icon_perk_master_concussion_shells.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 69,
   "type": "Basic",
@@ -756,7 +756,7 @@
   "frame": "Raptor",
   "restrictions": ["Raptor"],
   "image": "48px-Icon_perk_passive_conduit.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 70,
   "type": "Basic",
@@ -899,7 +899,7 @@
   "frame": "Electron",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_high_yield_capacitors.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 83,
   "type": "Master",
@@ -910,7 +910,7 @@
   "frame": "Electron",
   "restrictions": [],
   "image": "48px-Icon_perk_master_rapid_kinesis_assemblage.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 84,
   "type": "Basic",
@@ -921,7 +921,7 @@
   "frame": "Arsenal",
   "restrictions": ["Arsenal"],
   "image": "48px-Icon_perk_passive_munitions.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 85,
   "type": "Basic",
@@ -932,7 +932,7 @@
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_combat_veteran.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 86,
   "type": "Intermediate",
@@ -954,7 +954,7 @@
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_fully_loaded.png",
-  "tags": [ "Other" ]
+  "tags": [ "Utility" ]
 }, {
   "id": 88,
   "type": "Master",
