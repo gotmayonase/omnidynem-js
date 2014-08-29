@@ -1,5 +1,5 @@
 /*global Chart */
-var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate','mgcrea.ngStrap.helpers.dimensions','mgcrea.ngStrap.modal', 'ngSanitize']);
+var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate','mgcrea.ngStrap.helpers.dimensions']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -15,16 +15,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 
 app.controller('PerksController', function($scope, $http, $filter, $location){
-
-  $scope.saveBuild = function(){
-    var perks = _.filter($scope.perks, function(perk){ return perk.selected; });
-    var output = {
-      suit: $scope.currentSuit.id,
-      perks: _.map(perks, function(perk){ return perk.id; })
-    };
-
-    $scope.shareUrl="http://localhost:9001/#/perks?build=" + btoa(JSON.stringify(output));
-  };
 
   $scope.perksHash = null;
   $scope.points = 0;
