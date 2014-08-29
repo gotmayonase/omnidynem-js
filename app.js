@@ -353,7 +353,7 @@ app.directive('requirement', function($popover) {
   };
 });
 
-app.directive('share', function() {
+app.directive('share', function($location) {
   return {
     templateUrl: 'share.html',
     restrict: 'E',
@@ -363,22 +363,29 @@ app.directive('share', function() {
     },
     link: function(scope, element, attrs){
 
+      angular.element('input', element).bind('click', function(){
+        this.select();
+      });
+
       scope.toggle = function() {
         if (scope.perksHash) {
           scope.perksHash = null;
         } else {
-          console.log(scope);
+
           var perks = _.filter(scope.allPerks(), function(perk){ return perk.selected; });
           var output = {
             suit: scope.currentSuit().id,
             perks: _.map(perks, function(perk){ return perk.id; })
           };
 
-          scope.perksHash = "http://localhost:9001/#/perks?build=" + btoa(JSON.stringify(output));
+          scope.perksHash = btoa(JSON.stringify(output));
+          path = $location.path() + '?build=' + scope.perksHash;
+          scope.perksURL = $location.protocol() + '://' + $location.host() + ($location.port() ? ':' + $location.port() : '') + '/#' + path;
+          $location.url(path);
+          ele = angular.element('input', element);
+          ele.attr('size', scope.perksURL.length + 10);
         }
-
       }
-
     }
   };
 });
