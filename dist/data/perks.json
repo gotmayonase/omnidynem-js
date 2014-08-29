@@ -28,7 +28,7 @@
   "cost": 1,
   "level": 1,
   "frame": "Accord Dreadnaught",
-  "restrictions": ["Accord Dreadnaught"],
+  "restrictions": ["Accord Dreadnaught", "Rhino", "Mammoth", "Arsenal"],
   "image": "48px-Icon_perk_passive_resilient_plating.png",
   "tags": [ "defense" ]
 }, {
@@ -94,7 +94,7 @@
   "cost": 1,
   "level": 1,
   "frame": "Accord Assault",
-  "restrictions": ["Accord Assault"],
+  "restrictions": ["Accord Assault", "Firecat", "Tigerclaw"],
   "image": "48px-Icon_perk_passive_nanite_absorption.png",
   "tags": [ "defense", "healing" ]
 }, {
@@ -160,7 +160,7 @@
   "cost": 1,
   "level": 1,
   "frame": "Accord Biotech",
-  "restrictions": ["Accord Biotech"],
+  "restrictions": ["Accord Biotech", "Recluse", "Dragonfly"],
   "image": "48px-Icon_perk_passive_siphoning_unit.png",
   "tags": [ "healing" ]
 }, {
@@ -226,7 +226,7 @@
   "cost": 1,
   "level": 1,
   "frame": "Accord Engineer",
-  "restrictions": ["Accord Engineer"],
+  "restrictions": ["Accord Engineer", "Bastion", "Electron"],
   "image": "48px-Icon_perk_passive_repairing_nanites.png",
   "tags": [ "defense", "healing" ]
 }, {
@@ -292,7 +292,7 @@
   "cost": 1,
   "level": 1,
   "frame": "Accord Recon",
-  "restrictions": ["Accord Recon"],
+  "restrictions": ["Accord Recon", "Nighthawk", "Raptor"],
   "image": "48px-Icon_perk_passive_regenerative_plating.png",
   "tags": [ "healing" ]
 }, {
