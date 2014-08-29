@@ -13,7 +13,7 @@
     <div class="left">
       <label>SELECT A FRAME</label>
       <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="groupedSuits" data-template="dropdowns/frames.tpl.html">
-        <img ng-src="/images/frames/{{currentSuit.thumb}}" width="18" height="18" style="float: left;margin-right: 2px;"/>
+        <img ng-src="/images/frames/{{currentSuit.thumb}}" width="18" height="18" style="float: left;margin-right: 2px;" ng-hide="!currentSuit" />
         {{ currentSuit.name }}
       </button>
 
