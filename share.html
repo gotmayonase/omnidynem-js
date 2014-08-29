@@ -1,6 +1,5 @@
 <input type="text" editable="false" ng-model="perksHash" ng-hide="!perksHash" />
 <button type="button" class="btn btn-md share" ng-click="toggle()">
-  <span ng-if="!perksHash">SHARE</span>
-  <span ng-if="perksHash">HIDE</span>
-  <i class="fa fa-share" />
+  {{ perksHash ? 'HIDE' : 'SHARE' }}
+  <i class="fa {{ perksHash ? 'fa-times' : 'fa-share' }}" />
 </button>
