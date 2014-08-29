@@ -26,6 +26,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     $scope.shareUrl="http://localhost:9001/#/perks?build=" + btoa(JSON.stringify(output));
   };
 
+  $scope.perksHash = null;
   $scope.points = 0;
   $scope.max_points = 21;
   $scope.suits  = [];
@@ -348,6 +349,36 @@ app.directive('requirement', function($popover) {
         placement: 'bottom-left'
       });
       popover.$scope.requirement = scope.data;
+    }
+  };
+});
+
+app.directive('share', function() {
+  return {
+    templateUrl: 'share.html',
+    restrict: 'E',
+    scope: {
+      allPerks: '&',
+      currentSuit: '&'
+    },
+    link: function(scope, element, attrs){
+
+      scope.toggle = function() {
+        if (scope.perksHash) {
+          scope.perksHash = null;
+        } else {
+          console.log(scope);
+          var perks = _.filter(scope.allPerks(), function(perk){ return perk.selected; });
+          var output = {
+            suit: scope.currentSuit().id,
+            perks: _.map(perks, function(perk){ return perk.id; })
+          };
+
+          scope.perksHash = "http://localhost:9001/#/perks?build=" + btoa(JSON.stringify(output));
+        }
+
+      }
+
     }
   };
 });

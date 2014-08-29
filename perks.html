@@ -22,8 +22,10 @@
       {{ currentTag.name || 'ALL' }}
     </button>
 
-    <input ng-model="shareUrl" />
-    <button ng-click="saveBuild()">Get URL</button>
+    <share
+      current-suit="currentSuit"
+      all-perks="allPerks">
+    </share>
   </div>
   <div class="pure-u-5-12 all-perks">
 
