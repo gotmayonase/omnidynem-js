@@ -380,7 +380,7 @@ app.directive('share', function($location) {
 
           scope.perksHash = btoa(JSON.stringify(output));
           var path = $location.path() + '?build=' + scope.perksHash;
-          scope.perksURL = $location.protocol() + '://' + $location.host() + ($location.port() ? ':' + $location.port() : '') + '/#' + path;
+          scope.perksURL = $location.protocol() + '://' + $location.host() + ($location.port() !== 80 ? ':' + $location.port() : '') + '/#' + path;
           $location.url(path);
           var ele = angular.element('input', element);
           ele.attr('size', scope.perksURL.length + 10);
