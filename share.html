@@ -1,5 +1,4 @@
-<input type="text" readonly="readonly" ng-model="perksURL" ng-hide="!perksHash" />
-<button type="button" class="btn btn-md share" ng-click="toggle()">
-  {{ perksHash ? 'HIDE' : 'SAVE &amp; SHARE' }}
-  <i class="fa {{ perksHash ? 'fa-times' : 'fa-share' }}" />
+<button type="button" class="btn btn-md share" data-animation="am-fade" data-placement="center" bs-modal="modal" data-backdrop='static' data-template="modal/share.tpl.html">
+  {{ 'SHARE' }}
+  <i class="fa fa-share"/>
 </button>

@@ -1,5 +1,5 @@
 /*global Chart */
-var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate','mgcrea.ngStrap.helpers.dimensions']);
+var app = angular.module('Perks', ['ui.utils','ui.router','mgcrea.ngStrap','ngAnimate','mgcrea.ngStrap.helpers.dimensions','mgcrea.ngStrap.modal', 'ngSanitize']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -183,6 +183,19 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
     $scope.donut.push(defaultDataPoint);
     $scope.updatePerkRequirements(selected);
+    $scope.updatePerksHash(selected);
+  };
+
+
+  $scope.updatePerksHash = function(selectedPerks) {
+    var output = {
+      suit: $scope.currentSuit.id,
+      perks: _.map(selectedPerks, function(perk){ return perk.id; })
+    };
+
+    $scope.perksHash = btoa(JSON.stringify(output));
+    var path = $location.path() + '?build=' + $scope.perksHash;
+    $location.url(path).replace();
   };
 
   $scope.updatePerkRequirements = function(selectedPerks) {
@@ -358,33 +371,16 @@ app.directive('share', function($location) {
     templateUrl: 'share.html',
     restrict: 'E',
     scope: {
-      allPerks: '&',
-      currentSuit: '&'
+      perksHash: '@'
     },
     link: function(scope, element, attrs){
 
-      angular.element('input', element).bind('click', function(){
-        this.select();
-      });
+      scope.select = function(event){
+        $(event.target).select();
+      };
 
-      scope.toggle = function() {
-        if (scope.perksHash) {
-          scope.perksHash = null;
-        } else {
-
-          var perks = _.filter(scope.allPerks(), function(perk){ return perk.selected; });
-          var output = {
-            suit: scope.currentSuit().id,
-            perks: _.map(perks, function(perk){ return perk.id; })
-          };
-
-          scope.perksHash = btoa(JSON.stringify(output));
-          var path = $location.path() + '?build=' + scope.perksHash;
-          scope.perksURL = $location.protocol() + '://' + $location.host() + ($location.port() !== 80 ? ':' + $location.port() : '') + '/#' + path;
-          $location.url(path);
-          var ele = angular.element('input', element);
-          ele.attr('size', scope.perksURL.length + 10);
-        }
+      scope.modal = {
+        url: $location.absUrl()
       };
     }
   };
