@@ -157,16 +157,19 @@ div[ui-view] {
     float:right;
 
     input {
-      border: 1px solid #ccc;
-      padding: 8px;
-      border-radius: 3px;
-      box-sizing: border-box;
       text-align: center;
-      font-family: 'Eurostile Demi';
-      background: #ccc;
-      font-size: 0.8em;
     }
   }
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: 'Eurostile Demi';
+  background: #ccc;
+  font-size: 0.8em;
 }
 
 .all-perks .perk.selected {
@@ -412,6 +415,29 @@ div[ui-view] {
       width: 100%;
     }
   }
+}
+
+.frameLevels {
+
+  .modal-content {
+
+    .frameLevel {
+      margin-bottom: 10px;
+    }
+
+    .frameGroup:nth-of-type(n-2) {
+      border-bottom: 1px solid #777;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: auto;
+      float: right;
+      margin-right: 10px;
+    }
+
+  }
+
 }
 
 .modal-backdrop.am-fade {

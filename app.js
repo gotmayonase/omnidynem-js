@@ -54,6 +54,11 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     defaultDataPoint.value = ($scope.max_points - points);
   });
 
+  $scope.$watch('suits', function(suits){
+    console.log('suits changed');
+    $scope.updatePerkAvailability();
+  }, true);
+
   var COLOR_MAP = {
     Basic: '#95F285',
     Intermediate: '#F4F993',
@@ -195,7 +200,9 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
         requireFrame(perk.frame, perk.level);
       }
     });
-    requireFrame($scope.currentSuit.name, 40);
+    if ($scope.currentSuit) {
+      requireFrame($scope.currentSuit.name, 40);
+    }
   };
 
   function requireFrame(frame, level) {
@@ -214,7 +221,10 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
   $scope.updatePerkAvailability = function() {
     _.each($scope.allPerks, function(perk){
       var frame = _.findWhere($scope.suits, { name: perk.frame });
-      if (perk.restrictions && perk.restrictions.length && !_.contains(perk.restrictions, $scope.currentSuit.name)) {
+      if (
+        (perk.restrictions && perk.restrictions.length && !_.contains(perk.restrictions, $scope.currentSuit.name)) ||
+        frame && perk.level > frame.level
+      ) {
         perk.available = false;
 
         if (perk.selected) {
