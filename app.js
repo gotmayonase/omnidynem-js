@@ -331,7 +331,7 @@ app.directive('perk', function($popover) {
       var popover = $popover(element,{
         trigger: 'hover',
         template: 'popover.html',
-        placement: 'bottom-left'
+        placement: 'right'
       });
       popover.$scope.perk = scope.data;
     }
