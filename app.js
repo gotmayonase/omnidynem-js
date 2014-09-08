@@ -18,7 +18,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
   $scope.perksHash = null;
   $scope.points = 0;
-  $scope.max_points = 21;
+  $scope.max_points = 0;
   $scope.suits  = [];
   $scope.perks  = [];
   $scope.allPerks = [];
@@ -54,9 +54,8 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     defaultDataPoint.value = ($scope.max_points - points);
   });
 
-  $scope.$watch('suits', function(suits){
-    console.log('suits changed');
-    $scope.updatePerkAvailability();
+  $scope.$watch('currentSuit', function(currentSuit){
+    $scope.updateMaxPoints();
   }, true);
 
   var COLOR_MAP = {
@@ -74,10 +73,9 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     .then(function(response){
       $scope.suits = response.data;
       $scope.currentSuit = $scope.suits[0];
-      $scope.groupedSuits = _.groupBy($scope.suits, 'type');
+      $scope.grouped_suits = _.groupBy($scope.suits, 'type');
       _.each($scope.suits, function(suit){ suit.level = 40; });
       $scope.loadPerks();
-      $scope.loaded = true;
       $scope.drawPointsLabel();
     });
 
@@ -99,6 +97,14 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
           $scope.updatePerkAvailability();
 
+          var frame_levels = obj.frame_levels;
+          _.each(frame_levels, function(_frame) {
+            var frame_id = _frame[0];
+            var frame_level = _frame[1];
+            var frame = _.findWhere($scope.suits, {id: frame_id });
+            frame.level = frame_level;
+          });
+
           var perks = _.filter($scope.perks, function(perk){
             return _.contains(obj.perks, perk.id);
           });
@@ -106,11 +112,18 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
           _.each(perks, function(perk){
             $scope.togglePerk(perk);
           });
+          $scope.updatePerkAvailability();
         }
         else
         {
           $scope.updatePerkAvailability();
         }
+
+        $scope.$watch('suits', function(suits){
+          $scope.updatePerkAvailability();
+          $scope.updateMaxPoints();
+          $scope.updatePerksHash();
+        }, true);
       });
   };
 
@@ -137,8 +150,18 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
     $scope.groupedPerks = _.groupBy($scope.perks, key);
   };
 
-  $scope.togglePerk = function(perk) {
+  $scope.updateMaxPoints = function() {
+    if ($scope.currentSuit) {
+      $scope.max_points = POINTS_PER_LEVEL[$scope.currentSuit.level - 1];
+      defaultDataPoint.value = ($scope.max_points - $scope.points);
+      if (!$scope.loaded) {
+        $scope.loaded = true;
+        $scope.drawPointsLabel();
+      }
+    }
+  };
 
+  $scope.togglePerk = function(perk) {
     if (!perk.available) {
       return;
     }
@@ -183,9 +206,13 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
 
   $scope.updatePerksHash = function(selectedPerks) {
+    var frames = $filter('filter')($scope.suits, function(suit){
+      return suit.level !== 40;
+    });
     var output = {
-      suit: $scope.currentSuit.id,
-      perks: _.map(selectedPerks, function(perk){ return perk.id; })
+      suit: $scope.currentSuit ? $scope.currentSuit.id : 0,
+      perks: _.map(selectedPerks, function(perk){ return perk.id; }),
+      frame_levels: _.map(frames, function(suit){ return [suit.id, suit.level]; })
     };
 
     $scope.perksHash = btoa(JSON.stringify(output));
@@ -201,7 +228,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
       }
     });
     if ($scope.currentSuit) {
-      requireFrame($scope.currentSuit.name, 40);
+      requireFrame($scope.currentSuit.name, $scope.currentSuit.level);
     }
   };
 
@@ -229,6 +256,7 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
 
         if (perk.selected) {
           $scope.points -= perk.cost;
+          $scope.selected_perks_count -= 1;
           perk.selected = false;
         }
 

@@ -12,8 +12,8 @@
   <div class="pure-u-1-1" id="header">
     <div class="left">
       <label>SELECT A FRAME</label>
-      <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="groupedSuits" data-template="dropdowns/frames.tpl.html">
-        <img ng-src="/images/frames/{{currentSuit.thumb}}" width="18" height="18" style="float: left;margin-right: 2px;" ng-hide="!currentSuit" />
+      <button type="button" class="btn btn-md" data-animation="am-flip-x" bs-dropdown="grouped_suits" data-template="dropdowns/frames.tpl.html">
+        <img ng-src="/images/frames/{{currentSuit.thumb}}" width="18" height="18" style="float: left;margin-right: 2px;" ng-hide="!currentSuit" ng-if="currentSuit"/>
         {{ currentSuit.name }}
       </button>
 
@@ -57,7 +57,7 @@
   <div class="pure-u-7-12" bs-affix data-offset-top="-50" id="fixedBox">
     <div class="pure-g">
       <div class="pure-u-1-2 slotted-perks">
-        <img ng-src="/images/frames/{{ currentSuit.image }}" title="{{currentSuit.name}}" width="250" height="250" style="opacity: 0.12;position: absolute;"/>
+        <img ng-src="/images/frames/{{ currentSuit.image }}" title="{{currentSuit.name}}" ng-if="currentSuit" width="250" height="250" style="opacity: 0.12;position: absolute;"/>
         <div ang:chartjs:doughnut
           data-chartjs-model="donut"
           data-chartjs-animation="false"
