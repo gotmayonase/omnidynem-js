@@ -407,8 +407,10 @@ app.directive('share', function($location) {
         $(event.target).select();
       };
 
-      scope.modal = {
-        url: $location.absUrl()
+      scope.modal = function(){
+        return {
+          url: $location.absUrl()
+        };
       };
     }
   };
