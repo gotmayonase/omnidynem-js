@@ -8,8 +8,15 @@ def process_url(url, download_directory)
   json = []
   frame_json = []
   doc = Nokogiri::HTML(open(url))
-  id = 1
-  frame_id = 1
+
+  perk_file = "/Users/mmayo/projects/firefall-perks/data/perks.json"
+  frame_file = "/Users/mmayo/projects/firefall-perks/data/frames.json"
+  perks = JSON.parse(File.read(perk_file))
+  max_perk_id = perks.map { |perk| perk['id'].to_i }.max
+  frames = JSON.parse(File.read(frame_file))
+  max_frame_id = frames.map { |frame| frame['id'].to_i }.max
+  frame_id = max_frame_id + 1
+  id = max_perk_id + 1
   doc.css('#mw-content-text table tr')[2..-1].each do |row|
     row.css('td').each_with_index do |td, i|
       next if td.content.nil? || td.content.strip.empty?
@@ -39,15 +46,22 @@ def process_url(url, download_directory)
             end
           end
         end
-        frame_json << {
-          id: frame_id,
-          name: frame,
-          thumb: File.basename(thumb_path),
-          image: File.basename(full_size_path),
-          text: frame,
-          click: "setFrame(item)"
+        new_json = {
+          'name' => frame,
+          'thumb' => File.basename(thumb_path),
+          'image' => File.basename(full_size_path),
+          'text' => frame,
+          'click' => "setFrame(item)"
         }
-        frame_id = frame_id + 1
+        if existing_frame = frames.detect { |f| f["name"] == frame }
+          new_json = existing_frame.merge(new_json)
+          frame_json << new_json
+        else
+          new_json = new_json.merge({ "id" => frame_id })
+          frame_json << new_json
+          frame_id = frame_id + 1
+        end
+
         next
       # frame specific
       elsif i == 3
@@ -79,24 +93,30 @@ def process_url(url, download_directory)
         image_name = nil
       end
       name = span.css('a')[1].content
-
-      json << {
-        id: id,
-        type: types[i].capitalize,
-        name: name,
-        desc: desc,
-        cost: costs[i],
-        level: required_levels[i],
-        frame: frame,
-        restrictions: required_frame ? [ required_frame ] : [],
-        image: image_name
+      perk_json = {
+        'type' => types[i].capitalize,
+        'name' => name,
+        'desc' => desc,
+        'cost' => costs[i],
+        'level' => required_levels[i],
+        'frame' => frame,
+        'restrictions' => required_frame ? [ required_frame ] : [],
+        'image' => image_name
       }
+      if perk = perks.detect { |perk| perk['name'] == name }
+        new_json = perk.merge(perk_json)
+        json << new_json
+      else
+        new_json = perk_json.merge( { "id" => id} )
+        json << new_json
+        id = id + 1
+      end
 
-      id = id + 1
+
     end
   end
-  File.open('/Users/mmayo/projects/firefall-perks/perks.json', 'wb') { |f| f.write(json.to_json) }
-  File.open('/Users/mmayo/projects/firefall-perks/frames.json', 'wb') { |f| f.write(frame_json.to_json) }
+  File.open(perk_file, 'wb') { |f| f.write(json.to_json) }
+  File.open(frame_file, 'wb') { |f| f.write(frame_json.to_json) }
 end
 
 

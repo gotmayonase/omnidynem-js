@@ -122,7 +122,8 @@ app.controller('PerksController', function($scope, $http, $filter, $location){
         $scope.$watch('suits', function(suits){
           $scope.updatePerkAvailability();
           $scope.updateMaxPoints();
-          $scope.updatePerksHash();
+          var selected = $filter('filter')($scope.allPerks,{ selected: true });
+          $scope.updatePerksHash(selected);
         }, true);
       });
   };
