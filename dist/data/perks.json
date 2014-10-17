@@ -2,13 +2,13 @@
   "id": 1,
   "type": "Basic",
   "name": "Neutralizer",
-  "desc": "Reduces damage taken from Poison damage types by 20%.",
+  "desc": "Reduces damage taken from Poison damage types by 20%",
   "cost": 1,
   "level": 1,
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_neutralizer.png",
-  "tags": [ "defense" ]
+  "tags": ["defense"]
 }, {
   "id": 2,
   "type": "Basic",
@@ -19,106 +19,40 @@
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_achievement_chosen_hunter.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 3,
-  "type": "Basic",
-  "name": "Resilient Plating",
-  "desc": "When below 25% health, the Dreadnaught automatically regenerates 1% of their max health per second.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Accord Dreadnaught",
-  "restrictions": ["Accord Dreadnaught", "Rhino", "Mammoth", "Arsenal"],
-  "image": "48px-Icon_perk_passive_resilient_plating.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 4,
-  "type": "Basic",
-  "name": "Get a Move On",
-  "desc": "Increases run speed by 15% when weapon is holstered.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Accord Dreadnaught",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_get_a_move_on.png",
-  "tags": [ "movement" ]
-}, {
-  "id": 5,
-  "type": "Intermediate",
-  "name": "Knockout",
-  "desc": "Increases damage of melee attack by 20% and adds a chance to stun the target.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Accord Dreadnaught",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_knockout.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 6,
-  "type": "Advanced",
-  "name": "Deflection Plating",
-  "desc": "Enemy bullets that hit you have a 33% chance to ricochet and damage a nearby enemy.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Accord Dreadnaught",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_deflection_plating.png",
-  "tags": [ "defense", "damage" ]
-}, {
-  "id": 7,
-  "type": "Master",
-  "name": "Hellbent",
-  "desc": "Suffering damage causes your Battleframe offensive systems to go into overdrive, receiving a 5% damage increase every time your Battleframe is hit. This stacks up to 25% bonus damage and lasts 15 seconds.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Accord Dreadnaught",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_hellbent.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 8,
-  "type": "Basic",
-  "name": "Incalescent Armor",
-  "desc": "Reduces damage taken from Fire and Blast damage types by 20%.",
-  "cost": 1,
-  "level": 1,
-  "frame": null,
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_incalescent_armor.png",
-  "tags": [ "defense" ]
+  "tags": ["damage"]
 }, {
   "id": 9,
   "type": "Basic",
   "name": "Nanite Absorption",
-  "desc": "Assault Exclusive Perk: gain 50% additional healing when picking up or using health packs.",
+  "desc": "Assault Exclusive Perk: gain additional healing (10% of max health) when picking up or using health packs",
   "cost": 1,
   "level": 1,
   "frame": "Accord Assault",
-  "restrictions": ["Accord Assault", "Firecat", "Tigerclaw"],
+  "restrictions": ["Accord Assault"],
   "image": "48px-Icon_perk_passive_nanite_absorption.png",
-  "tags": [ "defense", "healing" ]
+  "tags": ["defense", "healing"]
 }, {
   "id": 10,
   "type": "Basic",
   "name": "Quick-Flexing Servos",
-  "desc": "Increases jump height by 3m.",
+  "desc": "Increases jump height by 3m",
   "cost": 1,
   "level": 10,
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_quick-flexing_servos.png",
-  "tags": [ "movement" ]
+  "tags": ["movement"]
 }, {
   "id": 11,
   "type": "Intermediate",
   "name": "Plasma Enthusiast",
-  "desc": "Energy and Plasma Weapons deal 10% additional damage.",
+  "desc": "Energy and Plasma Weapons deal 10% additional damage",
   "cost": 2,
   "level": 20,
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_plasma_enthusiast.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 12,
   "type": "Advanced",
@@ -129,359 +63,490 @@
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_invigorate.png",
-  "tags": [ "movement", "damage" ]
+  "tags": ["movement", "damage"]
 }, {
   "id": 13,
   "type": "Master",
   "name": "Second Wind",
-  "desc": "Rapidly killing 5 or more enemies when health is critical (Below 30% health) heals the user for 60% of their max health.",
+  "desc": "Rapidly killing 5 or more enemies when health is critical (Below 30% health) heals the user for 60% of their max health",
   "cost": 8,
   "level": 40,
   "frame": "Accord Assault",
   "restrictions": [],
   "image": "48px-Icon_perk_master_second_wind.png",
-  "tags": [ "defense", "healing" ]
+  "tags": ["defense", "healing"]
 }, {
-  "id": 14,
+  "id": 8,
   "type": "Basic",
-  "name": "Powered Armor",
-  "desc": "Reduces damage taken from Energy damage type by 20%.",
+  "name": "Incalescent Armor",
+  "desc": "Reduces damage taken from Fire and Blast damage types by 20%",
   "cost": 1,
   "level": 1,
   "frame": null,
   "restrictions": [],
-  "image": "48px-Icon_perk_basic_powered_armor.png",
-  "tags": [ "defense" ]
+  "image": "48px-Icon_perk_basic_incalescent_armor.png",
+  "tags": ["defense"]
+}, {
+  "type": "Basic",
+  "name": "Agile",
+  "desc": "Reduces your grenade item and ability cooldowns by one second as well as improving your weapon reload speed by 10%.",
+  "cost": 1,
+  "level": 1,
+  "frame": null,
+  "restrictions": [],
+  "image": "48px-Icon_perk_achievement_agile.png",
+  "id": 89
 }, {
   "id": 15,
   "type": "Basic",
   "name": "Siphoning Unit",
-  "desc": "Biotech Exclusive Perk: Siphoning Unit heals the user for 10% of any damage or healing they inflict. Does not work with damage inflicted by healing abilities.",
+  "desc": "Biotech Exclusive Perk: Siphoning Unit heals the user for 10% of any damage or healing they inflict",
   "cost": 1,
   "level": 1,
   "frame": "Accord Biotech",
-  "restrictions": ["Accord Biotech", "Recluse", "Dragonfly"],
+  "restrictions": ["Accord Biotech"],
   "image": "48px-Icon_perk_passive_siphoning_unit.png",
-  "tags": [ "healing" ]
+  "tags": ["healing"]
 }, {
   "id": 16,
   "type": "Basic",
   "name": "Persistence",
-  "desc": "Increases health regeneration.",
+  "desc": "Increases base health regeneration by 30%",
   "cost": 1,
   "level": 10,
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_persistence.png",
-  "tags": [ "healing" ]
+  "tags": ["healing"]
 }, {
   "id": 17,
   "type": "Intermediate",
   "name": "Bio Blending",
-  "desc": "Increases damage dealt while at full health by 10%.",
+  "desc": "Increases damage dealt while at full health by 10%",
   "cost": 2,
   "level": 20,
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_bio_blending.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 18,
   "type": "Advanced",
   "name": "Catalytic Poisons",
-  "desc": "Targets hit with poison abilities have additional damage dealt as a delayed poison burst several seconds after being infected. Targets hit with poison damage take additional damage equal to 2.5x your power rating after every 3 seconds.",
+  "desc": "Targets hit with poison abilities have additional damage dealt as a delayed poison burst (250 hp damage at level 1) several seconds after being infected",
   "cost": 5,
   "level": 30,
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_catalytic_poisons.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 19,
   "type": "Master",
   "name": "Toxic Finale",
-  "desc": "Detonate a powerful poison bomb when incapacitated.",
+  "desc": "Detonate a powerful poison bomb when incapacitated. The Poison cloud inflicts 200hp/sec (at Lvl 1) in a 4m radius",
   "cost": 8,
   "level": 40,
   "frame": "Accord Biotech",
   "restrictions": [],
   "image": "48px-Icon_perk_master_toxic_finale.png",
-  "tags": [ "damage", "defense" ]
+  "tags": ["damage", "defense"]
+}, {
+  "id": 14,
+  "type": "Basic",
+  "name": "Powered Armor",
+  "desc": "Reduces damage taken from Energy damage type by 20%",
+  "cost": 1,
+  "level": 1,
+  "frame": null,
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_powered_armor.png",
+  "tags": ["defense"]
+}, {
+  "id": 3,
+  "type": "Basic",
+  "name": "Resilient Plating",
+  "desc": "When below 35% health, the Dreadnaught automatically regenerates 1% of their max health per second.",
+  "cost": 1,
+  "level": 1,
+  "frame": "Accord Dreadnaught",
+  "restrictions": ["Accord Dreadnaught"],
+  "image": "48px-Icon_perk_passive_resilient_plating.png",
+  "tags": ["defense"]
+}, {
+  "id": 4,
+  "type": "Basic",
+  "name": "Get a Move On",
+  "desc": "Increases run speed by 10% when weapon is holstered",
+  "cost": 1,
+  "level": 10,
+  "frame": "Accord Dreadnaught",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_get_a_move_on.png",
+  "tags": ["movement"]
+}, {
+  "id": 5,
+  "type": "Intermediate",
+  "name": "Knockout",
+  "desc": "Increases damage of melee attack by 20%, and adds a chance to stun the target",
+  "cost": 2,
+  "level": 20,
+  "frame": "Accord Dreadnaught",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_knockout.png",
+  "tags": ["damage"]
+}, {
+  "id": 6,
+  "type": "Advanced",
+  "name": "Deflection Plating",
+  "desc": "Enemy bullets that hit you have a 33% chance to ricochet and also damage a nearby enemy",
+  "cost": 5,
+  "level": 30,
+  "frame": "Accord Dreadnaught",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_deflection_plating.png",
+  "tags": ["defense", "damage"]
+}, {
+  "id": 7,
+  "type": "Master",
+  "name": "Hellbent",
+  "desc": "Suffering damage causes your Battleframe offensive systems to go into overdrive, stacking up to +25% bonus damage",
+  "cost": 8,
+  "level": 40,
+  "frame": "Accord Dreadnaught",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_hellbent.png",
+  "tags": ["damage"]
 }, {
   "id": 20,
   "type": "Basic",
   "name": "Kinetic Absorption",
-  "desc": "Reduces damage taken from Bullet and Kinetic damage types by 20%.",
+  "desc": "Reduces damage taken from Bullet and Kinetic damage types by 20%",
   "cost": 1,
   "level": 1,
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_kinetic_absorption.png",
-  "tags": [ "defense" ]
+  "tags": ["defense"]
 }, {
   "id": 21,
   "type": "Basic",
   "name": "Repairing Nanites",
-  "desc": "Engineer Exclusive Perk: Your deployables are equipped with self-repair nanites.",
+  "desc": "Engineer Exclusive Perk: Your deployables are equipped with self-repair nanites (regenerating 1% per second)",
   "cost": 1,
   "level": 1,
   "frame": "Accord Engineer",
-  "restrictions": ["Accord Engineer", "Bastion", "Electron"],
+  "restrictions": ["Accord Engineer"],
   "image": "48px-Icon_perk_passive_repairing_nanites.png",
-  "tags": [ "defense", "healing" ]
+  "tags": ["defense", "healing"]
 }, {
   "id": 22,
   "type": "Basic",
   "name": "Fuel Injectors",
-  "desc": "Increases energy recharge rate by 20%.",
+  "desc": "Increases energy recharge rate by 20%",
   "cost": 1,
   "level": 10,
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_fuel_injectors.png",
-  "tags": [ "movement" ]
+  "tags": ["movement"]
 }, {
   "id": 23,
   "type": "Intermediate",
   "name": "Resonating Shields",
-  "desc": "Increases the duration of all shield effects by 2 seconds.",
+  "desc": "Increases the duration of all shield effects by 2 seconds",
   "cost": 2,
   "level": 20,
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_resonating_shields.png",
-  "tags": [ "defense" ]
+  "tags": ["defense"]
 }, {
   "id": 24,
   "type": "Advanced",
   "name": "Mounted Firepower",
-  "desc": "Increases the damage of your deployables by 25%.",
+  "desc": "Increases the damage of your deployables by 25%",
   "cost": 5,
   "level": 30,
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_mounted_firepower.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 25,
   "type": "Master",
   "name": "Hyper Kinesis Surge",
-  "desc": "When HKM is activated, the user gains a 130% speed boost and a 50% defensive bonus.",
+  "desc": "When HKM is activated, the user gains a 130% speed boost and a 50% defensive bonus",
   "cost": 8,
   "level": 40,
   "frame": "Accord Engineer",
   "restrictions": [],
   "image": "48px-Icon_perk_master_hyper_kinesis_surge.png",
-  "tags": [ "defense", "movement" ]
+  "tags": ["defense", "movement"]
 }, {
   "id": 26,
   "type": "Basic",
   "name": "Sprinter",
-  "desc": "Increases sprint speed by an additional 5%.",
+  "desc": "Increases sprint speed by an additional 5%",
   "cost": 1,
   "level": 1,
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_sprinter.png",
-  "tags": [ "movement" ]
+  "tags": ["movement"]
 }, {
   "id": 27,
   "type": "Basic",
   "name": "Regenerative Plating",
-  "desc": "Recon Exclusive Perk: Grants a short burst of health after a kill or assist. Each kill or assist grants 10% health over 2.5 seconds (5 ticks of 2% every 0.5 seconds). Does not stack.",
+  "desc": "Recon Exclusive Perk: Grants a short burst of health (10% of max health) after a kill or assist",
   "cost": 1,
   "level": 1,
   "frame": "Accord Recon",
-  "restrictions": ["Accord Recon", "Nighthawk", "Raptor"],
+  "restrictions": ["Accord Recon"],
   "image": "48px-Icon_perk_passive_regenerative_plating.png",
-  "tags": [ "healing" ]
+  "tags": ["healing"]
 }, {
   "id": 28,
   "type": "Basic",
   "name": "Head Hunter",
-  "desc": "Increases headshot damage by 10%.",
+  "desc": "Increases headshot damage by 10%",
   "cost": 1,
   "level": 10,
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_head_hunter.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 29,
   "type": "Intermediate",
   "name": "SIN Precision",
-  "desc": "Targets placed into SIN are visible behind walls.",
+  "desc": "Targets placed into SIN are visible behind walls",
   "cost": 2,
   "level": 20,
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_sin_precision.png",
-  "tags": [ "utility" ]
+  "tags": ["utility"]
 }, {
   "id": 30,
   "type": "Advanced",
   "name": "Tactician",
-  "desc": "Increases the effectiveness of debuffing abilities.",
+  "desc": "Grants a 20% chance to reset your ability cooldowns when you inflict a headshot. This effect can trigger once per minute",
   "cost": 5,
   "level": 30,
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_tactician.png",
-  "tags": [ "defense", "damage" ]
+  "tags": ["defense", "damage"]
 }, {
   "id": 31,
   "type": "Master",
   "name": "Energy Spikes",
-  "desc": "Activating an ability will deploy an energy spike trap at the users location. Enemies in the trap are snared and take damage over time.",
+  "desc": "Activating an ability will deploy an energy spike trap at the users location. Enemies in the trap are snared (-60% movement speed) and take damage over time (100 hp/sec at level 1)",
   "cost": 8,
   "level": 40,
   "frame": "Accord Recon",
   "restrictions": [],
   "image": "48px-Icon_perk_master_energy_spikes.png",
-  "tags": [ "damage", "defense" ]
+  "tags": ["damage", "defense"]
 }, {
   "id": 32,
   "type": "Basic",
   "name": "Prototype Pistons",
-  "desc": "Increases base movement speed by 0.5 m a second.",
+  "desc": "Increases base movement speed by +0.5 meters per second.",
   "cost": 1,
   "level": 1,
   "frame": null,
   "restrictions": [],
   "image": "48px-Icon_perk_basic_prototype_pistons.png",
-  "tags": [ "movement" ]
-}, {
-  "id": 33,
-  "type": "Basic",
-  "name": "Auxiliary Tanks",
-  "desc": "Tigerclaw Exclusive Perk: Grants the Tigerclaw bonus energy regeneration whenever an ability is used.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Tigerclaw",
-  "restrictions": ["Tigerclaw"],
-  "image": "48px-Icon_perk_passive_auxiliary_tanks.png",
-  "tags": [ "movement" ]
-}, {
-  "id": 34,
-  "type": "Basic",
-  "name": "Quick Hands",
-  "desc": "Reduces weapon switching time by 30%.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Tigerclaw",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_quick_hands.png",
-  "tags": [ "utility" ]
-}, {
-  "id": 35,
-  "type": "Intermediate",
-  "name": "Quick-Pivot Servos",
-  "desc": "Increases run speed by 0.5m/s and sprint speed by 5%.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Tigerclaw",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_quick-pivot_servos.png",
-  "tags": [ "movement" ]
-}, {
-  "id": 36,
-  "type": "Advanced",
-  "name": "Eye of the Tiger",
-  "desc": "Reduces the cooldown of movement abilities by 2.5 seconds.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Tigerclaw",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_eye_of_the_tiger.png",
-  "tags": [ "movement" ]
-}, {
-  "id": 37,
-  "type": "Master",
-  "name": "Hunter",
-  "desc": "Repeatedly striking the same target increases damage +10% per hit. (Maximum of +40% increase.)",
-  "cost": 8,
-  "level": 40,
-  "frame": "Tigerclaw",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_hunter.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 38,
-  "type": "Basic",
-  "name": "Fast Hands",
-  "desc": "Increases reload speed by 10%.",
-  "cost": 1,
-  "level": 1,
-  "frame": null,
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_fast_hands.png",
-  "tags": [ "utility" ]
+  "tags": ["movement"]
 }, {
   "id": 39,
   "type": "Basic",
   "name": "Incinerator",
-  "desc": "Firecat Exclusive Perk: Targets that are hit by the Firecat's abilities are briefly set on fire, dealing damage over time.",
+  "desc": "Firecat Exclusive Perk: Targets that are hit by the Firecat's abilities are briefly set on fire, dealing damage over time (50hp/sec at Lvl 1)",
   "cost": 1,
   "level": 1,
   "frame": "Firecat",
   "restrictions": ["Firecat"],
   "image": "48px-Icon_perk_passive_incinerator.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 40,
   "type": "Basic",
   "name": "Collateral Analytics",
-  "desc": "Reduces damage done to yourself by 40%.",
+  "desc": "Reduces damage done to yourself by 40%",
   "cost": 1,
   "level": 10,
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_collateral_analytics.png",
-  "tags": [ "defense" ]
+  "tags": ["defense"]
 }, {
   "id": 41,
   "type": "Intermediate",
   "name": "Epicenter",
-  "desc": "Increases the damage dealt of PBAE abilities by 15%.",
+  "desc": "Increases the damage dealt of PBAE abilities by 15%",
   "cost": 2,
   "level": 20,
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_epicenter.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 42,
   "type": "Advanced",
   "name": "Corpse Combustion",
-  "desc": "When an enemy is killed, there is a 25% chance that their corpse bursts into flames, damaging nearby enemies.",
+  "desc": "When an enemy is killed, there is a 25% chance that their corpse bursts into flames, damaging nearby enemies",
   "cost": 5,
   "level": 30,
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_corpse_combustion.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 43,
   "type": "Master",
   "name": "Flame Buffer",
-  "desc": "Activating abilities creates a fire shield that burns nearby enemies. After several seconds, the buffer explodes, dealing damage to nearby enemies.",
+  "desc": "Activating abilities creates a fire shield that burns nearby enemies (50hp/sec at Lvl 1). After several seconds, the buffer explodes, dealing damage to nearby enemies (200hp at Lvl 1). Uses Immolate's radius if it is equipped",
   "cost": 8,
   "level": 40,
   "frame": "Firecat",
   "restrictions": [],
   "image": "48px-Icon_perk_master_flame_buffer.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
+}, {
+  "id": 38,
+  "type": "Basic",
+  "name": "Fast Hands",
+  "desc": "Increases reload speed by 10%",
+  "cost": 1,
+  "level": 1,
+  "frame": null,
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_fast_hands.png",
+  "tags": ["utility"]
+}, {
+  "id": 33,
+  "type": "Basic",
+  "name": "Auxiliary Tanks",
+  "desc": "Tigerclaw Exclusive Perk: Grants the Tigerclaw bonus energy regeneration (40 energy/sec) whenever an ability is used",
+  "cost": 1,
+  "level": 1,
+  "frame": "Tigerclaw",
+  "restrictions": ["Tigerclaw"],
+  "image": "48px-Icon_perk_passive_auxiliary_tanks.png",
+  "tags": ["movement"]
+}, {
+  "id": 34,
+  "type": "Basic",
+  "name": "Quick Hands",
+  "desc": "Reduces weapon switching time by 30%",
+  "cost": 1,
+  "level": 10,
+  "frame": "Tigerclaw",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_quick_hands.png",
+  "tags": ["utility"]
+}, {
+  "id": 35,
+  "type": "Intermediate",
+  "name": "Quick-Pivot Servos",
+  "desc": "Increases run speed by 0.5m/s a second and sprint speed by 5%",
+  "cost": 2,
+  "level": 20,
+  "frame": "Tigerclaw",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_quick-pivot_servos.png",
+  "tags": ["movement"]
+}, {
+  "id": 36,
+  "type": "Advanced",
+  "name": "Eye of the Tiger",
+  "desc": "Reduces the cooldown of movement abilities by 2.5 seconds",
+  "cost": 5,
+  "level": 30,
+  "frame": "Tigerclaw",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_eye_of_the_tiger.png",
+  "tags": ["movement"]
+}, {
+  "id": 37,
+  "type": "Master",
+  "name": "Hunter",
+  "desc": "Repeatedly striking the same target increases damage +10% per hit. (Maximum of +40% increase)",
+  "cost": 8,
+  "level": 40,
+  "frame": "Tigerclaw",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_hunter.png",
+  "tags": ["damage"]
+}, {
+  "id": 49,
+  "type": "Basic",
+  "name": "Rally",
+  "desc": "Dragonfly Exclusive Perk: Dealing damage increases the Dragonfly's healing output (+10%), and healing increases the Dragonfly's damage output (+5%)",
+  "cost": 1,
+  "level": 1,
+  "frame": "Dragonfly",
+  "restrictions": ["Dragonfly"],
+  "image": "48px-Icon_perk_passive_rally.png",
+  "tags": ["healing", "damage"]
+}, {
+  "id": 50,
+  "type": "Basic",
+  "name": "Bio Reserves",
+  "desc": "Reduces the cooldown of all Healing abilities by 3 seconds",
+  "cost": 1,
+  "level": 10,
+  "frame": "Dragonfly",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_bio_reserves.png",
+  "tags": ["healing"]
+}, {
+  "id": 51,
+  "type": "Intermediate",
+  "name": "Frequent Patient",
+  "desc": "Increases healing received by 10%",
+  "cost": 2,
+  "level": 20,
+  "frame": "Dragonfly",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_frequent_patient.png",
+  "tags": ["healing"]
+}, {
+  "id": 52,
+  "type": "Advanced",
+  "name": "Combat Medic",
+  "desc": "Reviving incapacitated players will restore them to full health. Additionally, increases the base health regeneration of nearby allies by +20%",
+  "cost": 5,
+  "level": 30,
+  "frame": "Dragonfly",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_combat_medic.png",
+  "tags": ["healing"]
+}, {
+  "id": 53,
+  "type": "Master",
+  "name": "Auto-Repair",
+  "desc": "Doubles health regeneration when out of combat. Additionally, when greater than 40% life is dealt to the player in one instance of damage, applies the same regeneration bonus",
+  "cost": 8,
+  "level": 40,
+  "frame": "Dragonfly",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_auto-repair.png",
+  "tags": ["healing"]
 }, {
   "id": 44,
   "type": "Basic",
   "name": "Necrotic Poison",
-  "desc": "Recluse Exclusive Perk: Dealing poison damage applies a necrotic poison that reduces the target's damage output.",
+  "desc": "Recluse Exclusive Perk: Dealing poison damage applies a necrotic poison that reduces the target's damage output by 10%",
   "cost": 1,
   "level": 1,
   "frame": "Recluse",
   "restrictions": ["Recluse"],
   "image": "48px-Icon_perk_passive_necrotic_poison.png",
-  "tags": [ "defense", "damage" ]
+  "tags": ["defense", "damage"]
 }, {
   "id": 45,
   "type": "Basic",
@@ -492,29 +557,29 @@
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_virus.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 46,
   "type": "Intermediate",
   "name": "Necrotic Bite",
-  "desc": "Increases damage done to Humanoid targets by 10%.",
+  "desc": "Increases damage done to Humanoid targets by 10%",
   "cost": 2,
   "level": 20,
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_necrotic_bite.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 47,
   "type": "Advanced",
   "name": "Potent Toxins",
-  "desc": "Weapons and Abilities that deal Poison Damage snare targets, slowing them by -80%. This movement slowing lasts 3 seconds.",
+  "desc": "Weapons and Abilities that deal Poison Damage snare targets, slowing them by 30%. This movement slowing lasts 3 seconds.",
   "cost": 5,
   "level": 30,
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_potent_toxins.png",
-  "tags": [ "utility" ]
+  "tags": ["utility"]
 }, {
   "id": 48,
   "type": "Master",
@@ -525,414 +590,29 @@
   "frame": "Recluse",
   "restrictions": [],
   "image": "48px-Icon_perk_master_anatomy_lessons.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 49,
-  "type": "Basic",
-  "name": "Rally",
-  "desc": "Dragonfly Exclusive Perk: Dealing damage increases the Dragonfly's healing output, and healing increases the Dragonfly's damage output.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Dragonfly",
-  "restrictions": ["Dragonfly"],
-  "image": "48px-Icon_perk_passive_rally.png",
-  "tags": [ "healing", "damage" ]
-}, {
-  "id": 50,
-  "type": "Basic",
-  "name": "Bio Reserves",
-  "desc": "Reduces the cooldown of all Healing abilities by 3 seconds.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Dragonfly",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_bio_reserves.png",
-  "tags": [ "healing" ]
-}, {
-  "id": 51,
-  "type": "Intermediate",
-  "name": "Frequent Patient",
-  "desc": "Increases healing received by 10%.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Dragonfly",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_frequent_patient.png",
-  "tags": [ "healing" ]
-}, {
-  "id": 52,
-  "type": "Advanced",
-  "name": "Combat Medic",
-  "desc": "Reviving incapacitated players will restore them to full health. Additionally, increases the health regeneration of nearby allies.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Dragonfly",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_combat_medic.png",
-  "tags": [ "healing" ]
-}, {
-  "id": 53,
-  "type": "Master",
-  "name": "Auto-Repair",
-  "desc": "Doubles health regeneration when out of combat. Additionally, when greater than 40% life is dealt to the player in one instance of damage, applies the same regeneration bonus.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Dragonfly",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_auto-repair.png",
-  "tags": [ "healing" ]
-}, {
-  "id": 54,
-  "type": "Basic",
-  "name": "Personal Shield",
-  "desc": "Rhino Exclusive Perk: When activating an ability, the Rhino briefly becomes shielded, absorbing a small amount of damage.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Rhino",
-  "restrictions": ["Rhino"],
-  "image": "48px-Icon_perk_passive_personal_shield.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 55,
-  "type": "Basic",
-  "name": "Back in Action",
-  "desc": "Reduces respawn timer by 20%.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Rhino",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_back_in_action.png",
-  "tags": [ "utility" ]
-}, {
-  "id": 56,
-  "type": "Intermediate",
-  "name": "Stampede",
-  "desc": "Sprinting snares nearby targets by 60%.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Rhino",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_stampede.png",
-  "tags": [ "utility" ]
-}, {
-  "id": 57,
-  "type": "Advanced",
-  "name": "Kill Stealer",
-  "desc": "Increases damage against critical targets (Below 50% health) by 30%.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Rhino",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_kill_stealer.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 58,
-  "type": "Master",
-  "name": "Hero",
-  "desc": "When health reaches zero, user becomes immune to damage for 5 seconds before dying.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Rhino",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_hero.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 59,
-  "type": "Basic",
-  "name": "Imminent Threat",
-  "desc": "Mammoth Exclusive Perk: Enemies within 7 meters take 10% more damage.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Mammoth",
-  "restrictions": ["Mammoth"],
-  "image": "48px-Icon_perk_passive_imminent_threat.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 60,
-  "type": "Basic",
-  "name": "Harden",
-  "desc": "After taking damage, armor hardens to reduce your next source of damage taken by 25%. Harden has a 7 second internal cooldown.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Mammoth",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_harden.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 61,
-  "type": "Intermediate",
-  "name": "Shields Up",
-  "desc": "Increases the Health of all shields.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Mammoth",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_shields_up.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 62,
-  "type": "Advanced",
-  "name": "Thick Hide",
-  "desc": "Increases base health (400hp at level 1).",
-  "cost": 5,
-  "level": 30,
-  "frame": "Mammoth",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_thick_hide.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 63,
-  "type": "Master",
-  "name": "Health Surge",
-  "desc": "Activating an ability heals you for 15% of your max health. This can only trigger once every 10 seconds.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Mammoth",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_health_surge.png",
-  "tags": [ "healing" ]
-}, {
-  "id": 64,
-  "type": "Basic",
-  "name": "Ambush",
-  "desc": "Nighthawk Exclusive Perk: While not aquired by enemy SIN, the Nighthawk's shots gain extra damage. This is a rate limited passive ability.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Nighthawk",
-  "restrictions": ["Nighthawk"],
-  "image": "48px-Icon_perk_passive_ambush.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 65,
-  "type": "Basic",
-  "name": "Ballistics Expert",
-  "desc": "Increases bullet damage by 5%.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Nighthawk",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_ballistics_expert.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 66,
-  "type": "Intermediate",
-  "name": "Spec. Ops",
-  "desc": "Increases the duration of stealth abilities and reduces cooldown of teleport abilities by 3 seconds.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Nighthawk",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_spec._ops.png",
-  "tags": [ "movement" ]
-}, {
-  "id": 67,
-  "type": "Advanced",
-  "name": "Sure Shot",
-  "desc": "Damaging target has a 10% chance to trigger an +50% rate of fire boost for 3 seconds. Effect can only occur once every 7 seconds.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Nighthawk",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_sure_shot.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 68,
-  "type": "Master",
-  "name": "Concussion Shells",
-  "desc": "Headshots reduce enemy movement speed and attack speed to 25% of normal. Additionally, headshots have a 25% chance to stun targets.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Nighthawk",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_concussion_shells.png",
-  "tags": [ "utility" ]
-}, {
-  "id": 69,
-  "type": "Basic",
-  "name": "Conduit",
-  "desc": "Raptor Exclusive Perk: Each hit of the Charge Rifle grants a stack of Conduit. Upon reaching three stacks, the next ability activated becomes Empowered, gaining additional effects. Using an Empowered Ability consumes all stacks.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Raptor",
-  "restrictions": ["Raptor"],
-  "image": "48px-Icon_perk_passive_conduit.png",
-  "tags": [ "utility" ]
-}, {
-  "id": 70,
-  "type": "Basic",
-  "name": "Grenadier",
-  "desc": "Reduces the cooldown on grenade abilities by 2 seconds.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Raptor",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_grenadier.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 71,
-  "type": "Intermediate",
-  "name": "Physicist",
-  "desc": "Increases weapon charging speed by 10%.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Raptor",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_physicist.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 72,
-  "type": "Advanced",
-  "name": "Energy Shaping",
-  "desc": "Changes your melee attack to a SIN blade, which extends melee range and increases damage.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Raptor",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_energy_shaping.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 73,
-  "type": "Master",
-  "name": "Arcing Bolts",
-  "desc": "Energy weapons chain weapon damage to nearby enemies. The chained bolt does 10% of the initial damage and jumps to new enemies within 1 meter. It can jump effectively infinite times, as long as there are applicable targets that have not been effected.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Raptor",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_arcing_bolts.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 74,
-  "type": "Basic",
-  "name": "Overseer",
-  "desc": "Bastion Exclusive Perk: All repairable deployables near the Bastion become shielded, reducing damage taken.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Bastion",
-  "restrictions": ["Bastion"],
-  "image": "48px-Icon_perk_passive_overseer.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 75,
-  "type": "Basic",
-  "name": "Hardware Genius",
-  "desc": "Increases damage dealt to deployables, machinery and vehicles by 20%.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Bastion",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_hardware_genius.png",
-  "tags": [ "damage" ]
-}, {
-  "id": 76,
-  "type": "Intermediate",
-  "name": "Resilient Alloys",
-  "desc": "Increases health of your deployables by 25%.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Bastion",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_resilient_alloys.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 77,
-  "type": "Advanced",
-  "name": "Sentient Armor",
-  "desc": "When hit, automatically adjusts battleframe armor to reduce damage from that damage type for 10 seconds. Adapts to Kinetic, Fire, Cryo and Poison damage types. Sentient armor has an internal cooldown of 30 seconds.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Bastion",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_sentient_armor.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 78,
-  "type": "Master",
-  "name": "Deployable Repulsor",
-  "desc": "Applies a repulsor unit to all of your owned deployables. The repulsor unit will detect enemies in close proximity and knock them back every 3 seconds. Does not work on large enemies such as Brontodons.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Bastion",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_deployable_repulsor.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 79,
-  "type": "Basic",
-  "name": "Dynamic Relay",
-  "desc": "Electron Exclusive Perk: Dealing damage increases the strength of the Electron's shields, and apply shields increases the Electron's rate of fire.",
-  "cost": 1,
-  "level": 1,
-  "frame": "Electron",
-  "restrictions": ["Electron"],
-  "image": "48px-Icon_perk_passive_dynamic_relay.png",
-  "tags": [ "defense", "damage" ]
-}, {
-  "id": 80,
-  "type": "Basic",
-  "name": "Combustion Boost",
-  "desc": "Adds an additional +40 Jet Energy.",
-  "cost": 1,
-  "level": 10,
-  "frame": "Electron",
-  "restrictions": [],
-  "image": "48px-Icon_perk_basic_combustion_boost.png",
-  "tags": [ "movement" ]
-}, {
-  "id": 81,
-  "type": "Intermediate",
-  "name": "Augmented Shield Generators",
-  "desc": "Reduces the cooldown of shield abilities by 2.5 seconds.",
-  "cost": 2,
-  "level": 20,
-  "frame": "Electron",
-  "restrictions": [],
-  "image": "48px-Icon_perk_intermediate_augmented_shield_generators.png",
-  "tags": [ "defense" ]
-}, {
-  "id": 82,
-  "type": "Advanced",
-  "name": "High Yield Capacitors",
-  "desc": "Activating your HKM instantly refreshes your cooldowns.",
-  "cost": 5,
-  "level": 30,
-  "frame": "Electron",
-  "restrictions": [],
-  "image": "48px-Icon_perk_advanced_high_yield_capacitors.png",
-  "tags": [ "utility" ]
-}, {
-  "id": 83,
-  "type": "Master",
-  "name": "Rapid Kinesis Assemblage",
-  "desc": "Increases the charge rate of HKM modules by 30%.",
-  "cost": 8,
-  "level": 40,
-  "frame": "Electron",
-  "restrictions": [],
-  "image": "48px-Icon_perk_master_rapid_kinesis_assemblage.png",
-  "tags": [ "utility" ]
+  "tags": ["damage"]
 }, {
   "id": 84,
   "type": "Basic",
   "name": "Munitions",
-  "desc": "Arsenal Exclusive Perk: Each ability use provides the Arsenal with additional ammo.",
+  "desc": "Arsenal Exclusive Perk: Each ability use provides the Arsenal with additional ammo (10% of Ammo Capacity)",
   "cost": 1,
   "level": 1,
   "frame": "Arsenal",
   "restrictions": ["Arsenal"],
   "image": "48px-Icon_perk_passive_munitions.png",
-  "tags": [ "utility" ]
+  "tags": ["utility"]
 }, {
   "id": 85,
   "type": "Basic",
   "name": "Combat Veteran",
-  "desc": "Increases reload and weapon switch speed 15%.",
+  "desc": "Increases reload and weapon switch speed by 15%",
   "cost": 1,
   "level": 10,
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_basic_combat_veteran.png",
-  "tags": [ "utility" ]
+  "tags": ["utility"]
 }, {
   "id": 86,
   "type": "Intermediate",
@@ -943,27 +623,357 @@
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_intermediate_stopping_power.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
 }, {
   "id": 87,
   "type": "Advanced",
   "name": "Fully Loaded",
-  "desc": "Increases magazine and total ammo capacities by 20%.",
+  "desc": "Increases magazine and total ammo capacities by 20%",
   "cost": 5,
   "level": 30,
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_advanced_fully_loaded.png",
-  "tags": [ "utility" ]
+  "tags": ["utility"]
 }, {
   "id": 88,
   "type": "Master",
   "name": "Explosives Expert",
-  "desc": "Increases all explosive damage dealt from abilities by 25%.",
+  "desc": "Increases all explosive damage dealt from abilities by 25%",
   "cost": 8,
   "level": 40,
   "frame": "Arsenal",
   "restrictions": [],
   "image": "48px-Icon_perk_master_explosives_expert.png",
-  "tags": [ "damage" ]
+  "tags": ["damage"]
+}, {
+  "id": 59,
+  "type": "Basic",
+  "name": "Imminent Threat",
+  "desc": "Mammoth Exclusive Perk: Nearby enemies become vulnerable, increasing the damage they take by 10%",
+  "cost": 1,
+  "level": 1,
+  "frame": "Mammoth",
+  "restrictions": ["Mammoth"],
+  "image": "48px-Icon_perk_passive_imminent_threat.png",
+  "tags": ["damage"]
+}, {
+  "id": 60,
+  "type": "Basic",
+  "name": "Harden",
+  "desc": "After taking damage, armor hardens to reduce your next source of damage taken by 25%. Harden has a 7 second internal cooldown",
+  "cost": 1,
+  "level": 10,
+  "frame": "Mammoth",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_harden.png",
+  "tags": ["defense"]
+}, {
+  "id": 61,
+  "type": "Intermediate",
+  "name": "Shields Up",
+  "desc": "Increases the Health of all shields by 20%",
+  "cost": 2,
+  "level": 20,
+  "frame": "Mammoth",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_shields_up.png",
+  "tags": ["defense"]
+}, {
+  "id": 62,
+  "type": "Advanced",
+  "name": "Thick Hide",
+  "desc": null,
+  "cost": 5,
+  "level": 30,
+  "frame": "Mammoth",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_thick_hide.png",
+  "tags": ["defense"]
+}, {
+  "id": 63,
+  "type": "Master",
+  "name": "Health Surge",
+  "desc": "Activating an ability heals you for 15% of your max health over 10 seconds",
+  "cost": 8,
+  "level": 40,
+  "frame": "Mammoth",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_health_surge.png",
+  "tags": ["healing"]
+}, {
+  "id": 54,
+  "type": "Basic",
+  "name": "Personal Shield",
+  "desc": "Rhino Exclusive Perk: When activating an ability, the Rhino briefly becomes shielded, absorbing a small amount of damage (10% of max health)",
+  "cost": 1,
+  "level": 1,
+  "frame": "Rhino",
+  "restrictions": ["Rhino"],
+  "image": "48px-Icon_perk_passive_personal_shield.png",
+  "tags": ["defense"]
+}, {
+  "id": 55,
+  "type": "Basic",
+  "name": "Back in Action",
+  "desc": "Reduces respawn timer by 20%",
+  "cost": 1,
+  "level": 10,
+  "frame": "Rhino",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_back_in_action.png",
+  "tags": ["utility"]
+}, {
+  "id": 56,
+  "type": "Intermediate",
+  "name": "Stampede",
+  "desc": "Sprinting snares nearby enemies. Targets within 4m have -50% move speed",
+  "cost": 2,
+  "level": 20,
+  "frame": "Rhino",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_stampede.png",
+  "tags": ["utility"]
+}, {
+  "id": 57,
+  "type": "Advanced",
+  "name": "Kill Stealer",
+  "desc": "Increases damage against critical targets (Below 50% health) by 30%",
+  "cost": 5,
+  "level": 30,
+  "frame": "Rhino",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_kill_stealer.png",
+  "tags": ["damage"]
+}, {
+  "id": 58,
+  "type": "Master",
+  "name": "Hero",
+  "desc": "When health reaches zero, user becomes immune to damage for 5 seconds. Hero has a 15 minute internal cooldown",
+  "cost": 8,
+  "level": 40,
+  "frame": "Rhino",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_hero.png",
+  "tags": ["defense"]
+}, {
+  "id": 74,
+  "type": "Basic",
+  "name": "Overseer",
+  "desc": "Bastion Exclusive Perk: All repairable deployables near the Bastion become shielded, reducing damage taken by 30%",
+  "cost": 1,
+  "level": 1,
+  "frame": "Bastion",
+  "restrictions": ["Bastion"],
+  "image": "48px-Icon_perk_passive_overseer.png",
+  "tags": ["defense"]
+}, {
+  "id": 75,
+  "type": "Basic",
+  "name": "Hardware Genius",
+  "desc": "Increases damage dealt to deployables, machinery and vehicles by 20%.",
+  "cost": 1,
+  "level": 10,
+  "frame": "Bastion",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_hardware_genius.png",
+  "tags": ["damage"]
+}, {
+  "id": 76,
+  "type": "Intermediate",
+  "name": "Resilient Alloys",
+  "desc": "Increases health of your non-shield deployables by 15%",
+  "cost": 2,
+  "level": 20,
+  "frame": "Bastion",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_resilient_alloys.png",
+  "tags": ["defense"]
+}, {
+  "id": 77,
+  "type": "Advanced",
+  "name": "Sentient Armor",
+  "desc": "When hit, automatically adjusts battleframe armor to reduce damage from that damage type by 20% for 10 seconds. Adapts to Kinetic, Fire, Cryo, and Poison damage types. Sentient armor has an internal cooldown of 30 seconds.",
+  "cost": 5,
+  "level": 30,
+  "frame": "Bastion",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_sentient_armor.png",
+  "tags": ["defense"]
+}, {
+  "id": 78,
+  "type": "Master",
+  "name": "Deployable Repulsor",
+  "desc": "Applies a repulsor unit to all of your owned deployables. The repulsor unit will detect enemies in close proximity and knock them back",
+  "cost": 8,
+  "level": 40,
+  "frame": "Bastion",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_deployable_repulsor.png",
+  "tags": ["defense"]
+}, {
+  "id": 79,
+  "type": "Basic",
+  "name": "Dynamic Relay",
+  "desc": "Electron Exclusive Perk: Dealing damage increases the strength of the Electron's shields (+10%), and applying shields increases the Electron's rate of fire (+10%)",
+  "cost": 1,
+  "level": 1,
+  "frame": "Electron",
+  "restrictions": ["Electron"],
+  "image": "48px-Icon_perk_passive_dynamic_relay.png",
+  "tags": ["defense", "damage"]
+}, {
+  "id": 80,
+  "type": "Basic",
+  "name": "Combustion Boost",
+  "desc": "Adds an additional +40 Jet Energy",
+  "cost": 1,
+  "level": 10,
+  "frame": "Electron",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_combustion_boost.png",
+  "tags": ["movement"]
+}, {
+  "id": 81,
+  "type": "Intermediate",
+  "name": "Augmented Shield Generators",
+  "desc": "Reduces the cooldown of shield abilities by 2.5 seconds",
+  "cost": 2,
+  "level": 20,
+  "frame": "Electron",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_augmented_shield_generators.png",
+  "tags": ["defense"]
+}, {
+  "id": 82,
+  "type": "Advanced",
+  "name": "High Yield Capacitors",
+  "desc": "Activating your HKM instantly refreshes your cooldowns",
+  "cost": 5,
+  "level": 30,
+  "frame": "Electron",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_high_yield_capacitors.png",
+  "tags": ["utility"]
+}, {
+  "id": 83,
+  "type": "Master",
+  "name": "Rapid Kinesis Assemblage",
+  "desc": "Increases the charge rate of HKM modules by 30%",
+  "cost": 8,
+  "level": 40,
+  "frame": "Electron",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_rapid_kinesis_assemblage.png",
+  "tags": ["utility"]
+}, {
+  "id": 64,
+  "type": "Basic",
+  "name": "Ambush",
+  "desc": "Nighthawk Exclusive Perk: While not acquired by enemy SIN, the Nighthawk's next shot inflicts +30% additional damage. Ambush has a 30 second internal cooldown",
+  "cost": 1,
+  "level": 1,
+  "frame": "Nighthawk",
+  "restrictions": ["Nighthawk"],
+  "image": "48px-Icon_perk_passive_ambush.png",
+  "tags": ["damage"]
+}, {
+  "id": 65,
+  "type": "Basic",
+  "name": "Ballistics Expert",
+  "desc": "Increases your bullet damage by 5%",
+  "cost": 1,
+  "level": 10,
+  "frame": "Nighthawk",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_ballistics_expert.png",
+  "tags": ["damage"]
+}, {
+  "id": 66,
+  "type": "Intermediate",
+  "name": "Spec. Ops",
+  "desc": "Increases the duration of stealth abilities and reduces cooldown of teleport abilities by 3 seconds.",
+  "cost": 2,
+  "level": 20,
+  "frame": "Nighthawk",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_spec._ops.png",
+  "tags": ["movement"]
+}, {
+  "id": 67,
+  "type": "Advanced",
+  "name": "Sure Shot",
+  "desc": "Damaging target has a 10% chance to trigger an +50% rate of fire boost for 3 seconds. Effect can only occur once every 7 seconds.",
+  "cost": 5,
+  "level": 30,
+  "frame": "Nighthawk",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_sure_shot.png",
+  "tags": ["damage"]
+}, {
+  "id": 68,
+  "type": "Master",
+  "name": "Concussion Shells",
+  "desc": "Headshots reduce enemy movement speed and attack speed to 25% of normal. Additionally, headshots have a 25% chance to stun targets",
+  "cost": 8,
+  "level": 40,
+  "frame": "Nighthawk",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_concussion_shells.png",
+  "tags": ["utility"]
+}, {
+  "id": 69,
+  "type": "Basic",
+  "name": "Conduit",
+  "desc": "Each hit of the Charge Rifle grants a stack of Conduit. Upon reaching three stacks, the next shot fired or the next ability activated becomes Empowered, gaining additional effects and consuming all stacks",
+  "cost": 1,
+  "level": 1,
+  "frame": "Raptor",
+  "restrictions": ["Raptor"],
+  "image": "48px-Icon_perk_passive_conduit.png",
+  "tags": ["utility"]
+}, {
+  "id": 70,
+  "type": "Basic",
+  "name": "Grenadier",
+  "desc": "Reduces the cooldown on grenade abilities by 2 seconds",
+  "cost": 1,
+  "level": 10,
+  "frame": "Raptor",
+  "restrictions": [],
+  "image": "48px-Icon_perk_basic_grenadier.png",
+  "tags": ["damage"]
+}, {
+  "id": 71,
+  "type": "Intermediate",
+  "name": "Physicist",
+  "desc": "Increases weapon charging speed by 10%",
+  "cost": 2,
+  "level": 20,
+  "frame": "Raptor",
+  "restrictions": [],
+  "image": "48px-Icon_perk_intermediate_physicist.png",
+  "tags": ["damage"]
+}, {
+  "id": 72,
+  "type": "Advanced",
+  "name": "Energy Shaping",
+  "desc": "Changes your melee attack to a SIN blade. SIN blade extends your melee range, increases melee damage by +50%, and changes the melee type to Energy damage",
+  "cost": 5,
+  "level": 30,
+  "frame": "Raptor",
+  "restrictions": [],
+  "image": "48px-Icon_perk_advanced_energy_shaping.png",
+  "tags": ["damage"]
+}, {
+  "id": 73,
+  "type": "Master",
+  "name": "Arcing Bolts",
+  "desc": "Energy weapons chain weapon damage to nearby enemies - Each arc inflicts 10% of weapon damage",
+  "cost": 8,
+  "level": 40,
+  "frame": "Raptor",
+  "restrictions": [],
+  "image": "48px-Icon_perk_master_arcing_bolts.png",
+  "tags": ["damage"]
 }]
